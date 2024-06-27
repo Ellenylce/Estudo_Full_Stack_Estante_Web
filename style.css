@@ -1,0 +1,44 @@
+/* acessa o elemento root e cria variaveis globais(válida em todo o código) */
+:root { /*paleta de cores*/
+    --primaria: #915f32;
+    --secundaria: #ce9056 ;
+    --terciaria: #e1e6eb;
+    --branco: white;
+    --preto: black ;
+}
+
+*{ /*regras para todos*/
+    margin:0; /*reseta a margem*/
+    padding:0; /*reseta o padding*/
+    box-sizing: border-box; /*calcula automaticmente as larguras considerando: conteúdo, bordas, margens e paddings*/
+}
+
+/* seleciona o header, coloca cor de fundo e um espaçamento interno */
+header{
+    background-color: var(--primaria);
+    padding: 1rem; /*estudar o porque usar rem e não outras unidades de medida: 1rem equivale a 16px*/
+}
+
+/* seleciona o nav, coloca cor de fundo, muda o display para grid, cria uma grade em 5 colunas de largura igual, alinha o texto no centro da coluna, espaçamento interno, espaço entre as colunas e linhas do grid */
+nav{
+    background-color: var(--secundaria); /*define 5 colunas 1 linha*/
+    display: grid; /*transforma o elemento em um contêiner de layout de grade*/
+    grid-template-columns: repeat(5, 1fr);  /*define 5 colunas 1 linha*/
+    text-align:center; /*alinha os textos*/
+    padding: 0.25rem;
+    gap: 0.5rem; /*espaçamento entre linhas e as colunas (outras duas formas de usar gap(grid-row-gap(linhas) ou grid-column-gap (colunas))*/
+}
+
+/* seleciona todos os links dentro de navs, remove a decoração dos links, muda a cor da letra e a exibição do ponteiro do mouse para uma mão */
+nav a{
+    text-decoration: none; /*tira o sublinhado dos links*/
+    color: var(--preto); /*cor da letra dos links*/
+    cursor: pointer; /*insere um ponteiro ao passar o mouse no link*/
+}
+
+/* qualque item com essa classe muda o display para flex, coloca o espaço vazio da horizontal no meio dos elementos, alinha os itens na vertical com base no seu centro */
+.logo-busca{
+    display: flex; /*transforma os elemento em um contêiner flexível*/
+    justify-content: space-between; /*alinha os itens ao longo do eixo principal com espaço entre eles.*/
+    align-items: center; /*alinha os itens ao centro de cima pra baixo (verticalmente) */
+}
