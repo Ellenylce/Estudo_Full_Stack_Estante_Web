@@ -89,24 +89,43 @@ footer{
 }
 
 /*Quem Somos*/
-.titulo_q_somos{
+.centralizar_titulo_q_somos{ /*setar o H1*/
     display: flex;
     width: auto;
-    height: 100px;
+    height: 150px;
     justify-content: center;
-    align-items: flex-end;;
+    align-items: flex-end;
+    
   
 }
-.centralizar_bloco{
+h1{ /*titulo*/
     
     border: solid 1px var(--primaria);
     background-color: var(--primaria);
     width: 250px;
-    padding: 5px;
     text-align: center;
     height: 50px;
     
+}
+.centralizar_text{
+    background-color: antiquewhite;
+    height: 500px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     
+}
+.text_q_somos{ /*elemento filho*/
+    font-size: 35px;
+    width: 55%;
+    text-align: center;
+}
+p{
+    font-size: 20px; 
+}
+.centralizar_p{
+    display:flex;
+    justify-content: center;
     
-   
+
 }
