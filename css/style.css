@@ -88,44 +88,36 @@ footer{
     margin: 0 1rem;
 }
 
-/*Quem Somos*/
-.centralizar_titulo_q_somos{ /*setar o H1*/
-    display: flex;
-    width: auto;
-    height: 150px;
-    justify-content: center;
-    align-items: flex-end;
-    
-  
+main{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    margin:0;
+    text-align: center;
 }
-h1{ /*titulo*/
-    
-    border: solid 1px var(--primaria);
+
+.centralizar_container{
+    max-width: 650px;
+    padding: 30px;   
+}
+
+.centralizar_titulo_q_somos{
     background-color: var(--primaria);
     width: 250px;
-    text-align: center;
-    height: 50px;
-    
+    margin-top:40px;
+    margin-bottom: 5px;
 }
-.centralizar_text{
-    background-color: antiquewhite;
-    height: 500px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.text_q_somos{ /*elemento filho*/
-    font-size: 35px;
-    width: 55%;
-    text-align: center;
-}
-p{
-    font-size: 20px; 
-}
-.centralizar_p{
-    display:flex;
-    justify-content: center;
-    
 
+.titulo_q_somos{
+    padding: 3px;
+}
+
+.text_q_somos{
+    margin-bottom: 40px;
+    font-size: 25px;
+    
+}
+.footer{
+    margin-top: 50px;
 }
