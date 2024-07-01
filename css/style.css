@@ -206,6 +206,23 @@ footer{
     border-top-right-radius: 20px;
 }
 
+.centralizar_icone_mais img{
+    display:flex;
+    width: 100%;
+    flex-direction:column;
+    justify-content:center;
+    
+}
+.centralizar_icone_mais img:hover{
+    transform: scale(1.3); /* Aumenta o ícone em 20% */
+    filter: brightness(1.5); /* Aumenta o brilho, simulando uma mudança de cor */
+    
+}
+
+.text_biblioteca_vazia{
+    font-size:18px;
+    color: var(--terciaria);
+}
 
 
    
