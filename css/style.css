@@ -37,6 +37,11 @@ nav a{
     cursor: pointer; /*insere um ponteiro ao passar o mouse no link*/
 }
 
+nav a:hover{
+    background-color: var(--primaria); 
+    color: var(--branco); 
+}
+
 /* qualque item com essa classe muda o display para flex, coloca o espaço vazio da horizontal no meio dos elementos, alinha os itens na vertical com base no seu centro */
 .logo-busca{
     display: flex; /*transforma os elemento em um contêiner flexível*/
@@ -78,6 +83,7 @@ footer{
 .alinhar{
     display: flex;
     align-items: center;
+    /* background-color:aqua; */
 }
 
 .img-fim{
@@ -88,7 +94,8 @@ footer{
     margin: 0 1rem;
 }
 
-main{
+/* QUEM SOMOS */
+.centralizar_main{
     display:flex;
     flex-direction: column;
     justify-content:center;
@@ -116,8 +123,92 @@ main{
 .text_q_somos{
     margin-bottom: 40px;
     font-size: 25px;
-    
 }
+
 .footer{
     margin-top: 50px;
 }
+
+/* CONTATO */
+.alinhar_horizontalmente{  /*alinha os elementos horizontalmente*/
+    width:600px;
+    margin:0px;
+    padding:0px;
+    display:flex;
+    justify-content: center; /*não apagar*/
+}
+
+.logo_r_social{ /*redimensionar a logo das redes sociais*/
+    height: 40px;
+    width: 40px;
+    padding:5px;
+    margin:10px;
+    background-color: var(--primaria);
+    border-radius:50%;
+}
+
+.alinhar_horizontalmente a{ /*alinho os icones em coluna*/
+    display:flex;
+    align-items: center;
+    text-decoration:none;
+    color:black;
+    font-size:30px;
+}
+
+/*FAVORITAR*/
+.alinhar_barra_Lateral{
+    display: flex;
+    margin-top: 30px;
+    padding:0;
+}
+
+.barra_Lateral{
+    background-color:var(--secundaria);
+    width: 200px; /*largura*/
+    padding: 20px;
+    height: 365px;
+    position:fixed; /*deixar a barra fixada*/
+    border-top-right-radius: 25px;
+}
+
+.barra_Lateral a{
+    /* display: block;  */
+    padding: 10px;
+    text-decoration: none; 
+    color:var(--preto); 
+    font-size: 15px;
+    display:flex;
+}
+
+.block_categorias{
+    background-color: var(--terciaria);
+    border: 1px solid #9b9191;
+    margin:5px;
+    padding:5px; 
+}
+
+.barra_Lateral a:hover{
+    background-color: var(--primaria); 
+    color: var(--branco); 
+}
+
+.box_books{
+    background-color: var(--secundaria); 
+    margin-left: 220px; /*ajustar a margem a esquerda */
+    width: 1100px; /*estudar e por responsividades aqui*/
+    margin-right: 50px; /*ajustar a margem a direita */
+    display:flex;
+    justify-content:center;
+    height: 100%; 
+    color: var(--terciaria);
+    align-items:center;  
+    border-top-left-radius: 20px; /*não estava funcionando o border-top*/
+    border-top-right-radius: 20px;
+}
+
+
+
+   
+    
+
+
