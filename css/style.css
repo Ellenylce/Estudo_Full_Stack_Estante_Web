@@ -102,6 +102,7 @@ footer{
     align-items:center;
     margin:0;
     text-align: center;
+    
 }
 
 .centralizar_container{
@@ -224,6 +225,60 @@ footer{
     color: var(--terciaria);
 }
 
+/* LOGIN */
+.alinhar_form{
+    border-radius: 20px;
+    background-color: var(--secundaria); 
+    display:flex; 
+    flex-direction:column; 
+    height: 400px; 
+    width: 400px; 
+    padding: 30px; 
+}
+
+.centralizar_form{
+    display:flex; 
+    height: 800px;
+    justify-content:center; 
+    align-items:center; 
+}
+.espacamento_label{
+    margin-bottom: 10px; 
+}
+.centralizar_titulo{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+input, button{
+    margin-bottom: 15px; /*margem inferior*/
+    border:1px solid var(--preto); /*borda solida com espessura de 1px de cor cinza */
+    height: 30px; /* altura */
+    width: 100%; 
+    border-radius: 5px;
+}
+button{
+    font-size: 15px;/*tamanho da fonte */
+    background: var(--primaria); 
+    /* border:none; tirar a borda */
+    border-radius:5px;
+    width: 100px; 
+    cursor: pointer; /*cursor vira ponteiro */
+}
+.centralizar{ /*centralizar button*/
+    margin-top: 10px;
+    display:flex;
+    justify-content: center;
+   
+
+}
+  
+   
+    
+    
+  
+   
+    
 
    
     
