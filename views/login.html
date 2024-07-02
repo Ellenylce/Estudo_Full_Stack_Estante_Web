@@ -26,20 +26,28 @@
     </nav>
     
     <!--Meu código-->
-    <main> <!--principal-->
-        <div class="centralizar_form">
-            <form class="alinhar_form">
-                <h3 class="centralizar_titulo">Acesse sua conta</h3>
-                <div class="espacamento_label"><h4><label for = "email">Email:</label></h4></div> <!--rotulo-->
-                <input type="email" name="email" required />
-                <div class="espacamento_label"><h4><label class="espacamento_label" for="password">Senha:</label></h4></div>
-                <input type="password" name="senha" required/>
-                <div class="centralizar"><button type="submit">ENTRAR</button></div> 
-                <div class="centralizar"><a href="#esqueceu_a_senha.html">Esqueceu sua senha?</a></div> 
-               
-            </form>
-        </div>
+    <main class="centralizar_main"> <!--principal-->
+       
         
+
+        <div class="box_login">
+            <form>
+                <h4>Acesse sua conta</h4>
+                <h5 class="alinha_label"><label for="email">Email:</label></h5>
+                <input type="email"  name="email" placeholder="Digite seu email ">
+                <h5><label class="alinha_label" for="password">Senha:</label></h5>
+                <input type="password"  name="password" placeholder="Digite sua senha">
+                <button type="submit">ENTRAR</button>
+                <div class="formatar_link">
+                    <a  href="#Esqueceu_sua_senha" >Esqueceu sua senha?</a>
+                </div>
+                
+            </form>
+            <div class="cadastro-link">
+                <p >Você ainda não se cadastrou? </p>
+                <a href="cadastro.html">Crie sua conta aqui</a>
+            </div>
+        </div>
 
 
     </main> 

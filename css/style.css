@@ -225,52 +225,73 @@ footer{
     color: var(--terciaria);
 }
 
+
 /* LOGIN */
-.alinhar_form{
-    border-radius: 20px;
-    background-color: var(--secundaria); 
-    display:flex; 
-    flex-direction:column; 
-    height: 400px; 
-    width: 400px; 
-    padding: 30px; 
+
+
+.box_login {
+    
+    background-color: var(--secundaria);
+    padding: 20px;
+    border-radius: 25px;
+    border:1px solid var(--preto);
+    width: 300px;
+    height: 300px;
+
 }
 
-.centralizar_form{
-    display:flex; 
-    height: 800px;
-    justify-content:center; 
-    align-items:center; 
+form {
+    display: flex;
+    flex-direction: column;
 }
-.espacamento_label{
+
+label {
+     margin: 10px 0 5px; /*margem superior/esquerda-direita/superior*/ 
+}
+.alinha_label{
+    display:flex;
+    text-align: left;
+}
+input {
+    padding: 10px; 
     margin-bottom: 10px; 
+    border: 1px solid var(--terciaria); 
+    border-radius: 5px; 
 }
-.centralizar_titulo{
-    display:flex;
-    justify-content: center;
-    margin-bottom: 40px;
-}
-input, button{
-    margin-bottom: 15px; /*margem inferior*/
-    border:1px solid var(--preto); /*borda solida com espessura de 1px de cor cinza */
-    height: 30px; /* altura */
-    width: 100%; 
-    border-radius: 5px;
-}
-button{
-    font-size: 15px;/*tamanho da fonte */
-    background: var(--primaria); 
-    /* border:none; tirar a borda */
-    border-radius:5px;
-    width: 100px; 
-    cursor: pointer; /*cursor vira ponteiro */
-}
-.centralizar{ /*centralizar button*/
-    margin-top: 10px;
-    display:flex;
-    justify-content: center;
-   
 
+button {
+    padding: 10px; 
+    background-color:var(--primaria); 
+    color: var(--branco); 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top:15px;
+    margin-bottom: 6px;;
+}
+
+
+.formatar_link a{
+    color: var(--preto);
+  
+}
+.formatar_link a:hover{
+    color: blue;
+}
+.cadastro-link  {
+    
+    margin-top: 30px;
+}
+
+.cadastro-link  a{
+    color: var(--preto);
+    
+}
+
+.cadastro-link a:hover {
+    color: blue;
 }
   
    
