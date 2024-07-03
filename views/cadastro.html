@@ -23,35 +23,45 @@
         <a href="contato.html">Contato</a>
         <a href="favoritos.html" class="alinhar"><img src="../imgs/star.png" alt="" width="20px" height ="20px">Favoritos</a>
         <a href="login.html">Login</a>
+
     </nav>
     
-    <!--Meu código-->
     <main class="centralizar_main"> <!--principal-->
-       
+        <div class="box_cadastro">
+            <form action="" method="post" enctype="multipart/form-data"> <!--É necessário adicionar a tag form caso caso o formulario for receber upload-->
+                <h4>Crie sua conta</h4>
+                <h5><label class="alinha_label" for="foto_perfil">Foto do perfil:</label></h5>
+                <input type="file" name="foto_perfil" id="foto_perfil"> <!--upload de foto de perfil-->
+                <!--Campo Nome-->
+                <h5><label class="alinha_label" for="name">Name:</label></form></h5>
+                <input type="text" name="name" id="name">
+                <!--Campo Email-->
+                <h5><label class="alinha_label" for="email">Email:</label></h5>
+                <input type="email" name="email" id="email">
+                <!--Campo Senha-->
+                <h5><label class="alinha_label" for="senha">Senha:</label></h5>
+                <input type="senha" name="senha" id="senha">
+                <!--botão cadastrar-->
+                <button type="submit">CRIAR CONTA</button>
+            </form>
+            <!--lINKS INFERIORES-->
+            <div class="login-link">
+                <p >Já é cadastrado? </p>
+                <a href="login.html">Acesse sua conta</a>
+            </div>
+            <!--Links de direitos de privacidade-->
+            <div class="privacidade-link">
+                <p >Ao seguir com o cadastro, concordo com os
+                    <a href="termos_uso.html">Termos de uso</a> e <a href="politicas_privacidade.html">Politicas de privacidade</a> </p>
+                
+            </div>
+
+        </div>
         
 
-        <div class="box_login">
-            <form >
-                <h4>Acesse sua conta</h4>
-                <h5 class="alinha_label"><label for="email">Email:</label></h5>
-                <input type="email"  name="email" placeholder="Digite seu email ">
-                <h5><label class="alinha_label" for="password">Senha:</label></h5>
-                <input type="password"  name="password" placeholder="Digite sua senha">
-                <button type="submit">ENTRAR</button>
-                <div class="formatar_link">
-                    <a  href="#Esqueceu_sua_senha" >Esqueceu sua senha?</a>
-                </div>
-                
-            </form>
-            <div class="cadastro-link">
-                <p >Você ainda não se cadastrou? </p>
-                <a href="cadastro.html">Crie sua conta aqui</a>
-            </div>
-        </div>
-
+       
 
     </main> 
-
 
     <footer>
         <div id="copy">
