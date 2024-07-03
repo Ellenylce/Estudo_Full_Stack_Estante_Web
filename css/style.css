@@ -226,8 +226,8 @@ footer{
 }
 
 
-/* LOGIN */
-
+/* ---------- LOGIN ------------ */
+/* Conteiner para por o formulario */
 .box_login {
     
     background-color: var(--secundaria);
@@ -236,9 +236,28 @@ footer{
     border:1px solid var(--preto);
     width: 300px;
     height: 300px;
-
+}
+/* Upload de foto de usuario */
+.foto_input{
+    display: none; /* Esconde o input file real */
+    
+}
+.foto_upload{
+    background-color: #f0f0f0;
+    padding: 8px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* color: #333; */
+    /* border: 2px dashed #007bff;  */
+    /* width: 100%; Faz o label ocupar 100% da largura do contêiner */
+    /* text-align: center; */
 }
 
+
+/* Formatações padrão */
 form {
     display: flex;
     flex-direction: column;
@@ -247,15 +266,13 @@ form {
 label {
      margin: 10px 0 5px; /*margem superior/esquerda-direita/superior*/ 
 }
-.alinha_label{
-    display:flex;
-    text-align: left;
-}
+
 input {
     padding: 10px; 
     margin-bottom: 10px; 
     border: 1px solid var(--terciaria); 
     border-radius: 5px; 
+    width:100%;
     
 }
 
@@ -271,27 +288,36 @@ button {
     margin-top:15px;
     margin-bottom: 6px;;
 }
-
-.formatar_link a{
+/* Alinhamento das labeis */
+.alinha_label{
+    display:flex;
+    text-align: left;
+}
+/* .formatar_link a{
     color: var(--preto);
 }
 
-.formatar_link a:hover{
+/* .formatar_link a:hover{
     color: blue;
-}
-.cadastro-link  {
-    margin-top: 40px;
+} */ 
+
+.esqueceu_senha{
+    margin-top: 10px;
 }
 
-.cadastro-link  a{
+.cadastro-link  {
+    margin-top: 30px;
+}
+
+/* .cadastro-link  a{
     color: var(--preto);  
 }
 
 .cadastro-link a:hover {
     color: blue;
-}
+} */
   
-/*Cadastro de usuário*/
+/*---------- CADASTRO USUARIO ------------*/
 .box_cadastro {
     
     background-color: var(--secundaria);
@@ -300,6 +326,21 @@ button {
     border:1px solid var(--preto);
     width: 400px;
     height: 500px;
+}
+
+a{
+    color: var(--preto); 
+}
+a:hover {
+    color: blue;
+}
+
+.login-link  {
+    margin-top: 30px;
+}
+
+.privacidade_link{
+    margin-top: 30px;
 }
 
 

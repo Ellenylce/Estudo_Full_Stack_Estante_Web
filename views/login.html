@@ -27,28 +27,29 @@
     
     <!--Meu código-->
     <main class="centralizar_main"> <!--principal-->
-       
-        
 
         <div class="box_login">
             <form >
                 <h4>Acesse sua conta</h4>
+                  <!--Campo Email-->
                 <h5 class="alinha_label"><label for="email">Email:</label></h5>
-                <input type="email"  name="email" placeholder="Digite seu email ">
-                <h5><label class="alinha_label" for="password">Senha:</label></h5>
-                <input type="password"  name="password" placeholder="Digite sua senha">
+                <input type="email"  name="email" id="email" placeholder="Digite seu email ">
+                <!--Campo Senha-->
+                <h5><label class="alinha_label" for="senha">Senha:</label></h5>
+                <input type="password"  name="senha" id="senha" placeholder="Digite sua senha">
+                <!--Botão de Entrar-->
                 <button type="submit">ENTRAR</button>
-                <div class="formatar_link">
-                    <a  href="#Esqueceu_sua_senha" >Esqueceu sua senha?</a>
-                </div>
-                
             </form>
+            <!--Links inferiores-->
+            <div class="esqueceu_senha">
+                <a  href="#Esqueceu_senha.html" >Esqueceu sua senha?</a>
+            </div>
+
             <div class="cadastro-link">
                 <p >Você ainda não se cadastrou? </p>
                 <a href="cadastro.html">Crie sua conta aqui</a>
             </div>
         </div>
-
 
     </main> 
 

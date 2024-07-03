@@ -31,8 +31,12 @@
             <form action="" method="post" enctype="multipart/form-data"> <!--É necessário adicionar a tag form caso caso o formulario for receber upload-->
                 <h4>Crie sua conta</h4>
                 <h5><label class="alinha_label" for="foto_perfil">Foto do perfil:</label></h5>
-                <input type="file" name="foto_perfil" id="foto_perfil"> <!--upload de foto de perfil-->
+                <label class="foto_upload" for="foto_perfil">
+                    <img src="../imgs/icone_upload_foto.svg" alt="" width="20px" height="20px">
+                </label>
+                <input class=" foto_input" type="file" name="foto_perfil" id="foto_perfil" accept=".png, .jpeg"> <!--upload de foto de perfil: aceita somente imagens png e jpg-->
                 <!--Campo Nome-->
+                
                 <h5><label class="alinha_label" for="name">Name:</label></form></h5>
                 <input type="text" name="name" id="name">
                 <!--Campo Email-->
