@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estante web</title>
+    <link rel="stylesheet" href="../css/style.css">; <!--Se conceta com CSS-->
+
+</head>
+<body>
+    <header> <!--Cabeça-->
+        <div class="logo-busca">
+            <h1>Estante Web</h1> <!--Depois adciona a logo também-->
+            <form action=""> <!--Formulário/ action: significa quem receberá-->
+                <input type="search" name="busca" id="busca"> <!--type=especifica que tipo de processamento nesse caso é de busca/ name="busca: identifica o campo de entrada -->
+            </form>
+
+        </div>
+    </header>
+    <nav> <!--seção de navegação-->
+        <a href="../index.html">Início</a> <!--links das seções-->
+        <a href="quem_somos.html">Quem Somos</a>
+        <a href="contato.html">Contato</a>
+        <a href="favoritos.html" class="alinhar"><img src="../imgs/star.png" alt="" width="20px" height ="20px">Favoritos</a>
+        <a href="login.html">Login</a>
+
+    </nav>
+    
+    <main class="centralizar_main"> <!--principal-->
+       <div id="box_Editar_livro">
+            <div id="alinhar_titulo_editar_livros">
+                <h1>Editar Livro</h1>
+                <img src="../imgs/icone_retroceder.svg" alt="" width="50px" heigth ="50px">
+            </div >
+            <div id="coluna_div">
+                <form action="" method="post" enctype="multipart/form-data">
+                   <!-- adicionar livro -->
+                    <div id="alinhar_upload_livro">
+                        <label id="livro_upload" for="livro_upload">
+                        <img src="../imgs/icone_upload_foto.svg" alt="" width="20px" height="20px">Adicionar Livro</label>
+                        <input type="file" name="livro_input" id="livro_input" accept=".png, .jpeg">
+                    </div>
+
+                </form>
+            </div>
+            <div>
+                <form>
+
+                </form>
+            </div>
+
+           
+       </div>
+    </main> 
+
+    <footer>
+        <div id="copy">
+            &copy; Estante Web
+        </div>
+        <div>
+            Todos os direitos reservados
+        </div>
+        <div class="img-fim">
+            <img src="../imgs/facebook.svg"alt="" width="30px" height="30px">
+            <img src="../imgs/instagram.svg"alt="" width="30px" height="30px">
+        </div>
+    </footer> <!--rodapé-->
+    
+</body>
+</html>

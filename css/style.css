@@ -237,24 +237,6 @@ footer{
     width: 300px;
     height: 300px;
 }
-/* Upload de foto de usuario */
-.foto_input{
-    display: none; /* Esconde o input file real */
-    
-}
-.foto_upload{
-    background-color: #f0f0f0;
-    padding: 8px; 
-    cursor: pointer; 
-    border-radius: 5px; 
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* color: #333; */
-    /* border: 2px dashed #007bff;  */
-    /* width: 100%; Faz o label ocupar 100% da largura do contêiner */
-    /* text-align: center; */
-}
 
 
 /* Formatações padrão */
@@ -336,21 +318,103 @@ a:hover {
 }
 
 .login-link  {
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom:40px;
 }
 
 .privacidade_link{
-    margin-top: 30px;
+    font-size:15px;
 }
 
+/* Upload de foto de usuario */
+.foto_input{
+    display: none; /* Esconde o input file real */
+    
+}
+.foto_upload{
+    background-color: #f0f0f0;
+    padding: 8px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* color: #333; */
+   
+    /* width: 100%; Faz o label ocupar 100% da largura do contêiner */
+    /* text-align: center; */
+}
+/* ---------- Perfil Usuário -----------*/
 
 
+
+
+
+
+
+
+/* ---------EDITAR LIVROS ---------- */
+   /* Container Editar livros */
+#box_Editar_livro{
+    background-color: var(--secundaria);
+    padding: 0px; 
+    margin:0px;
+    border-radius: 25px;
+    border:1px solid var(--preto);
+    width: 600px;
+    height: 500px;
    
+}    
+/* alinhar o titulo "editar livro" */
+#alinhar_titulo_editar_livros{
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    background-color: var(--primaria);
+    border-radius: 25px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#alinhar_titulo_editar_livros h1{
     
+}
+#alinhar_titulo_editar_livros img{
     
-  
+} 
+
+#coluna_div{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: aquamarine;
+    width: auto;
+    height: 200px;
+}
+
+/* Adicionar livro/ Upload livro */
+#livro_upload{
    
+    /* background-color: #f0f0f0; */
+    padding: 8px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+}
+#livro_input{
+    display:none;
     
+}
+#alinhar_upload_livro{
+
+    background-color:#9b9191;
+    height: 200px;
+    width: 200px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+
+}
 
    
     
