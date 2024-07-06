@@ -27,30 +27,53 @@
     </nav>
     
     <main class="centralizar_main"> <!--principal-->
-       <div id="box_Editar_livro">
-            <div id="alinhar_titulo_editar_livros">
-                <h1>Editar Livro</h1>
-                <img src="../imgs/icone_retroceder.svg" alt="" width="50px" heigth ="50px">
-            </div >
-            <div id="coluna_div">
-                <form action="" method="post" enctype="multipart/form-data">
-                   <!-- adicionar livro -->
-                    <div id="alinhar_upload_livro">
-                        <label id="livro_upload" for="livro_upload">
-                        <img src="../imgs/icone_upload_foto.svg" alt="" width="20px" height="20px">Adicionar Livro</label>
-                        <input type="file" name="livro_input" id="livro_input" accept=".png, .jpeg">
-                    </div>
 
-                </form>
-            </div>
-            <div>
-                <form>
+        <!-- O container que vai conter -->
+       <div class ="box_adm">
+        <div class="titulo">
+            <h2>Adicionar Livro</h2>
+            <span class="icone"><img src="../imgs/icone_retroceder.svg" alt="" width="30px" heigth ="30px"></span>
+        </div>
 
-                </form>
-            </div>
+        <div class="form_editar_livro">
+                <div class ="upload_livro">
+                    <!-- <input type="file" accept="image/*" required> -->
+                    <!-- <label id="livro_upload" for="livro_upload"> -->
+                    <!-- <img src="../imgs/icone_upload_foto.svg" alt="" width="20px" height="20px">Adicionar Livro -->
+                    <!-- </label> -->
+                    <label class="livro_input" for="livro_perfil">
+                        <img src="../imgs/icone_upload_foto.svg" alt="" width="20px" height="20px">Adicionar Livro
+                    </label>
+                    <input type="file" name="livro_perfil" id="livro_perfil" accept=".png, .jpeg">
 
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Digite o título" required style="width: 95%; margin-bottom: 10px;">
+                    <input type="text" placeholder="Digite o autor" required style="width: 95%; margin-bottom: 10px;">
+                    <!-- Uma caixa para selecionar as categorias -->
+                    <select required style="width: 95%">
+                        <option value="" disabled selected>Categoria</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Religioso">Religioso</option>
+                        <option value="Infantil">Infantil</option>
+                        <option value="Aventura">Aventura</option>
+                        <option value="Educação">Livros Educativos</option>
+                 </select>
+                </div>
+        </div>
+
+        <!-- Sinopse -->
+        <div class="sinopse">
+            <textarea rows="7" placeholder="Digite a sinopse" required style="width:100%"></textarea>
+        </div>
+        <!-- Bootões de ENVIAR e APAGAR -->
+        <div class="buttoes">
+            <button type="submit">Salvar</button>
+            <button type="reset">Apagar</button>
+        </div>
+    </div>
            
-       </div>
     </main> 
 
     <footer>

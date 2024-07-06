@@ -275,13 +275,6 @@ button {
     display:flex;
     text-align: left;
 }
-/* .formatar_link a{
-    color: var(--preto);
-}
-
-/* .formatar_link a:hover{
-    color: blue;
-} */ 
 
 .esqueceu_senha{
     margin-top: 10px;
@@ -291,13 +284,7 @@ button {
     margin-top: 30px;
 }
 
-/* .cadastro-link  a{
-    color: var(--preto);  
-}
 
-.cadastro-link a:hover {
-    color: blue;
-} */
   
 /*---------- CADASTRO USUARIO ------------*/
 .box_cadastro {
@@ -336,13 +323,7 @@ a:hover {
     padding: 8px; 
     cursor: pointer; 
     border-radius: 5px; 
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* color: #333; */
    
-    /* width: 100%; Faz o label ocupar 100% da largura do contêiner */
-    /* text-align: center; */
 }
 /* ---------- Perfil Usuário -----------*/
 
@@ -355,68 +336,134 @@ a:hover {
 
 /* ---------EDITAR LIVROS ---------- */
    /* Container Editar livros */
-#box_Editar_livro{
+
+
+.box_adm { /*container*/
     background-color: var(--secundaria);
-    padding: 0px; 
-    margin:0px;
-    border-radius: 25px;
-    border:1px solid var(--preto);
-    width: 600px;
-    height: 500px;
+    /* padding: 20px;  */
+    /* width: 50%; */
+    
+}
+.titulo {
    
-}    
-/* alinhar o titulo "editar livro" */
-#alinhar_titulo_editar_livros{
     width: 100%;
     height: 60px;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
     background-color: var(--primaria);
-    border-radius: 25px;
+    border-radius: 5px;
+}
+.titulo h2 {
+    margin: 0px;
+    display: inline-block; /*Elementos inline-block podem ficar lado a lado, respeitando o fluxo do texto.*/
+    margin-left: 55px;
+    margin-top:20px;
+   
+}
+.icone {
+    /* Float:right; faz com que o elemento se mova à direita dentro de seu contêiner pai. Quando aplicada a um elemento, ela faz com que o elemento "flutue" à direita, permitindo que outros elementos de texto ou inline fiquem ao lado dele, preenchendo o espaço à esquerda.*/
+    float: right; 
+    margin-right: 20px;
+    margin-top:18px; 
+}
+
+.form_editar_livro{
+   display:flex;
+   
+
+}
+
+.input{
+   
+    width: 70%;
+    padding-right: 10px;
+    padding-top:10px;
+    padding-bottom: 10px;
     display:flex;
-    justify-content: center;
-    align-items: center;
-
+    align-items: flex-end;
+    flex-direction: column;
 }
 
-#alinhar_titulo_editar_livros h1{
-    
+.input input {
+    background-color: var(--primaria);
+    border:none;
 }
-#alinhar_titulo_editar_livros img{
-    
+
+.input select {
+    border-radius:3px;
+    background-color: var(--primaria);
+    height: 35px;
+    color: var(--branco);
+    border:none;
 } 
 
-#coluna_div{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    background-color: aquamarine;
-    width: auto;
-    height: 200px;
+.input input::placeholder{
+    color: var(--branco);
+}
+/* sinopse */
+.sinopse{
+
+    padding:10px;
 }
 
-/* Adicionar livro/ Upload livro */
-#livro_upload{
-   
-    /* background-color: #f0f0f0; */
-    padding: 8px; 
-    cursor: pointer; 
-    border-radius: 5px; 
+.sinopse textarea{
+    background-color: var(--primaria);
+    text-align: center;
+    border-radius:5px;
+    border:none;
+    
 }
-#livro_input{
+.sinopse textarea::placeholder{
+    color: var(--branco);
+   
+}
+
+.upload_livro{
+    
+    background-color: #9b9191;
+    /* padding:10px; */
+    width: 136px;
+    height: 136px;
+    padding:10px;
+    margin:10px;
+    display:flex;
+    align-items: center;
+    align-items: center;
+    flex-direction: column; 
+    
+}
+
+.upload_livro label{
+    
+    width: 100px;
+    height: 200px;
+    display:flex; 
+    text-align: center;  
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;   
+}
+
+/* .upload_livro input{
+    display:none;
+    cursor: pointer;
+} */
+ 
+.upload_livro input {
     display:none;
     
 }
-#alinhar_upload_livro{
 
-    background-color:#9b9191;
-    height: 200px;
-    width: 200px;
-    display:flex;
-    justify-content:center;
-    align-items: center;
-
+.livro_input{
+    cursor: pointer; /* Isso muda o cursor para um ponteiro (mãozinha) */
 }
 
-   
+.buttoes button {
+    background-color: var(--primaria);
+    color: var(--branco);
+    cursor: pointer;
+}
+.buttoes button:hover {
+    filter: brightness(0.9);
+}
     
-
-
