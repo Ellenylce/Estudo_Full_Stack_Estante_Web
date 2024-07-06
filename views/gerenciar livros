@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estante web</title>
-    <link rel="stylesheet" href="../css/style.css"> <!--Se conceta com CSS-->
+    <link rel="stylesheet" href="../css/style.css">; <!--Se conceta com CSS-->
 
 </head>
 <body>
@@ -26,26 +26,25 @@
 
     </nav>
     
-    <main class="alinhar_barra_Lateral"> <!--principal-->
-        <div class="barra_Lateral">
-            <div class="block_categorias"><a href="#Livros Educativos">Livros Educativos</a></div>
-            <div class="block_categorias"><a href="#Livros Religiosos">Livros Religiosos</a></div>
-            <div class="block_categorias"><a href="#Livros de Romance">Livros de Romance</a></div>
-            <div class="block_categorias"><a href="#Livros de Ficcao Cientifica..">Livros de Ficção...</a></div>
-            <div class="block_categorias"><a href="#Livros de aventura">Livros de Aventura</a></div>
-            <div class="block_categorias"><a href="#Livros Infantis">Livros Infantis</a></div>
-            
-        </div>
-        <div > <!--contem o box books-->
-            <div class="box_books">
-                <div class="centralizar_icone_mais">
-                    <p class="text_biblioteca_vazia">Sua biblioteca está vazia
-                        <!-- <a href="#Adicionar_livros" ><img src="../imgs/icone_mais.svg" alt="Adicionar Livros" width="50" height="50"></a>Sua biblioteca está vazia</a> -->
-                    </p>
-                </div>
-            </div>
-        </div> 
+    <main class="centralizar_main"> <!--principal-->
 
+        <!-- O container que vai conter -->
+        <div class ="box_adm">
+            <div class="titulo">
+                <span class="icone_config"><img src="../imgs/icone_config.svg" alt="" width="30px" heigth ="30px"></span>
+                <h2>Editar Livro</h2>
+                
+                <span class="icone"><img src="../imgs/icone_retroceder.svg" alt="" width="30px" heigth ="30px"></span>
+            </div>
+
+            <div class="form_gerenciar_livro">
+                <div class="buttoes_gerenciar">
+                    <button type="submit">Adicionar Livro</button>
+                    <button type="reset">Editar Livro</button>
+                </div> 
+            </div>
+        </div>
+           
     </main> 
 
     <footer>
