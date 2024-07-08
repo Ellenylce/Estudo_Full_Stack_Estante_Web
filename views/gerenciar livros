@@ -29,20 +29,24 @@
     <main class="centralizar_main"> <!--principal-->
 
         <!-- O container que vai conter -->
-        <div class ="box_adm">
-            <div class="titulo">
-                <span class="icone_config"><img src="../imgs/icone_config.svg" alt="" width="30px" heigth ="30px"></span>
-                <h2>Editar Livro</h2>
+        <div class ="box_gerenciar_livros">
+            <div class="titulo_container">
+                <a href="configuracao.htm">
+                    <img src="../imgs/icone_config.svg" alt="" width="30px" heigth ="30px">
+                </a>
+                <h2>Gerenciar Livros</h2>
                 
-                <span class="icone"><img src="../imgs/icone_retroceder.svg" alt="" width="30px" heigth ="30px"></span>
+                <a href="retroceder_pagina.html">
+                    <img src="../imgs/icone_retroceder.svg" alt="" width="30px" heigth ="30px">
+                </a>
             </div>
 
-            <div class="form_gerenciar_livro">
-                <div class="buttoes_gerenciar">
+           
+                <div class="buttoes_vertical">
                     <button type="submit">Adicionar Livro</button>
                     <button type="reset">Editar Livro</button>
                 </div> 
-            </div>
+            
         </div>
            
     </main> 
