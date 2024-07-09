@@ -497,7 +497,7 @@ a:hover {
    
 }
 
-.buttoes_vertical{
+.buttoes_vertical{ /*DEPOIS MUDO ISSO PARA ALINHAR VERTICAL*/
     display:flex;
     flex-direction: column;
     width: 350px;

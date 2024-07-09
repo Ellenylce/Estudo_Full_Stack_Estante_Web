@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estante web</title>
+    <link rel="stylesheet" href="../css/style.css">; <!--Se conceta com CSS-->
+
+</head>
+<body>
+    <header> <!--Cabeça-->
+        <div class="logo-busca">
+            <h1>Estante Web</h1> <!--Depois adciona a logo também-->
+            <form action=""> <!--Formulário/ action: significa quem receberá-->
+                <input type="search" name="busca" id="busca"> <!--type=especifica que tipo de processamento nesse caso é de busca/ name="busca: identifica o campo de entrada -->
+            </form>
+
+        </div>
+    </header>
+    <nav> <!--seção de navegação-->
+        <a href="../index.html">Início</a> <!--links das seções-->
+        <a href="quem_somos.html">Quem Somos</a>
+        <a href="contato.html">Contato</a>
+        <a href="favoritos.html" class="alinhar"><img src="../imgs/star.png" alt="" width="20px" height ="20px">Favoritos</a>
+        <a href="login.html">Login</a>
+
+    </nav>
+    
+    <main class="centralizar_main"> <!--principal-->
+
+        <!-- O container que vai conter -->
+        <div class ="box_gerenciar_livros">
+            <div class="titulo_container">
+                
+                <h2 style="margin-left: 50px;">Editar Categorias</h2> <!--Centralizo o texto ao centro-->
+                
+                <a href="retroceder_pagina.html">
+                    <img src="../imgs/icone_retroceder.svg" alt="" width="30px" heigth ="30px">
+                </a>
+            </div>
+
+           
+                <div class="alinhar_vertical">
+                    <input type="text" placeholder="Digite o nome da categoria" required style="width: 50%; margin-top: 20px;">
+                    <button style="width: 50%; margin-bottom: 20px;">SALVAR</button>
+                </div> 
+            
+        </div>
+           
+    </main> 
+
+    <footer>
+        <div id="copy">
+            &copy; Estante Web
+        </div>
+        <div>
+            Todos os direitos reservados
+        </div>
+        <div class="img-fim">
+            <img src="../imgs/facebook.svg"alt="" width="30px" height="30px">
+            <img src="../imgs/instagram.svg"alt="" width="30px" height="30px">
+        </div>
+    </footer> <!--rodapé-->
+    
+</body>
+</html>
