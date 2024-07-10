@@ -531,3 +531,76 @@ a:hover {
     flex-direction: column;
     
  }
+
+ /*---------- GERENCIAR CATEGORIAS ---------*/
+ .box_gerenciar{
+    background-color:var(--secundaria);
+    border-radius:10px;
+    height: 500px;
+    width: 500px;
+}
+
+.alinhar_categorias_adicionadas{
+    display:flex;
+    justify-content:center;
+}
+
+.categorias_adicionadas{
+    border-radius: 20px;
+    border: solid 2px var(--preto);
+    margin:10px;
+    background-color:var(--branco);
+    height: auto;
+    width: 80%;
+    display:flex;
+    justify-content:flex-end;
+}
+
+.titulo_gerenciar_categorias button{
+    background-color: var(--secundaria);
+    border-radius: 20px;
+    color:var(--preto);
+    
+}
+ 
+
+.titulo_gerenciar_categorias {
+    width: 100%;
+    display:flex;
+    border-radius:10px;
+    /* justify-content: space-around;  */
+    background-color: var(--primaria); 
+    margin:0px;
+    padding: 0px;
+    
+} 
+.titulo_gerenciar_categorias img, h2{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    
+}
+/* .alinhar_horizontl_start img, h2{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.titulo_gerenciar_categorias .alinhar_horizontal_start{ 
+    display:flex;
+    justify-content: flex-start; 
+    
+}   */
+/* .titulo_gerenciar_categorias .alinhar_horizontal_end{ 
+    display:flex;
+    justify-content: flex-end; 
+    
+}  */
+
+/* .titulo_gerenciar_categorias .alinhar_horizontal_start .alinhar_horizontal_end{
+    display:flex;
+    
+    justify-content: space-around; 
+   
+} */
