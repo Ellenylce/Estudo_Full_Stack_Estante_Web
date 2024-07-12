@@ -259,7 +259,7 @@ input {
     
 }
 
-button {
+.botao_entrar{
     padding: 10px; 
     background-color:var(--primaria); 
     color: var(--branco); 
@@ -513,37 +513,155 @@ a:hover {
 }
 
 
-/* ---------PERFIL ADM ---------- */
-.container_adm {
+/* ---------PERFIL  ---------- */
+.box_perfil{
     background-color: var(--secundaria);
-    width: 600px;
+    width: 500px;
     display:flex;
     align-items: center;
     
-
 }
-.container_adm .alinhar_coluna_esquerda{
+.box_perfil .alinhar_coluna_esquerda{
    display:flex;
    flex-direction: column;
+   width: 300px;
+   /* background-color:aqua; */
+  
 }
-.container_adm .alinhar_coluna_direita{
+/* .alinhar_coluna_esquerda img{
+    display:flex;
+
+} */
+.alinhar_coluna_esquerda p{
+    margin-bottom:30px;
+    
+}
+/* .alinhar_coluna_esquerda{
+    display:flex;
+    height: 100%;
+    /* align-items: center; 
+    
+} */
+.botao_container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.botoes_gerenciar{
+    background-color: var(--primaria); 
+    color: var(--branco);
+    border: none;
+    padding: 5px 5px; 
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.alinhar_coluna_esquerda button {
+    display:flex;
+   
+    justify-content: center;
+    justify-content: space-between;
+}
+.box_perfil .alinhar_coluna_direita{
+
+    width: 300px;
     display:flex;
     flex-direction: column;
+    /* background-color:aqua; */
     
  }
 
- /*---------- GERENCIAR CATEGORIAS ---------*/
- .box_gerenciar{
-    background-color:var(--secundaria);
-    border-radius:10px;
-    height: 500px;
-    width: 500px;
+ .alinhar_coluna_direita input{
+    display:flex;
+    align-self: center;
+ }
+.alinhar_coluna_direita button{
+    display:flex;
+    align-self:center;
+    text-align:center;
 }
 
-.alinhar_categorias_adicionadas{
+ .alinha_text_esquerda{
+    text-align: start;
+    margin-bottom:5px;
+ }
+
+ .moldura_perfil{
+    width: 150px;
+    height: 150px;
+    padding:10px;
+    background-color: var(--preto);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    color: var(--preto);
+    margin: 0 auto 20px auto;
+    
+    /* position: relative; */
+    cursor: pointer;
+ }
+.botao_gravar{
+    background-color: var(--primaria); 
+    color: var(--branco);
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+
+ .input_file{
+    display:none;
+ }
+
+ /*---------- GERENCIAR CATEGORIAS ---------*/
+
+  .box_titulo {
+    background-color: var(--primaria); 
+    width: 400px; 
+    padding: 10px; 
+    border-radius: 10px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+      
+} 
+
+.alinhar_esquerda {
+    display: flex;
+    align-items: center; 
+}
+
+
+.botao_adicionar{
+    background-color: var(--secundaria); 
+    color: var(--branco);
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    cursor: pointer;
+   
+}
+
+ .box_gerenciar_categorias{
+    background-color:var(--secundaria);
+    border-radius:10px;
+    height: 400px;
+    width: 400px;
+} 
+
+ .alinhar_categorias_adicionadas{
     display:flex;
     justify-content:center;
-}
+} 
 
 .categorias_adicionadas{
     border-radius: 20px;
@@ -554,53 +672,5 @@ a:hover {
     width: 80%;
     display:flex;
     justify-content:flex-end;
-}
-
-.titulo_gerenciar_categorias button{
-    background-color: var(--secundaria);
-    border-radius: 20px;
-    color:var(--preto);
-    
-}
- 
-
-.titulo_gerenciar_categorias {
-    width: 100%;
-    display:flex;
-    border-radius:10px;
-    /* justify-content: space-around;  */
-    background-color: var(--primaria); 
-    margin:0px;
-    padding: 0px;
-    
 } 
-.titulo_gerenciar_categorias img, h2{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: aqua;
-    
-}
-/* .alinhar_horizontl_start img, h2{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-.titulo_gerenciar_categorias .alinhar_horizontal_start{ 
-    display:flex;
-    justify-content: flex-start; 
-    
-}   */
-/* .titulo_gerenciar_categorias .alinhar_horizontal_end{ 
-    display:flex;
-    justify-content: flex-end; 
-    
-}  */
 
-/* .titulo_gerenciar_categorias .alinhar_horizontal_start .alinhar_horizontal_end{
-    display:flex;
-    
-    justify-content: space-around; 
-   
-} */
