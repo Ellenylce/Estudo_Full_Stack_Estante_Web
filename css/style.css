@@ -116,17 +116,11 @@ footer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     color: var(--branco);
-    
+    text-align:center;
 }
 
 #copy{
     text-align: start;
-}
-
-.alinhar{
-    display: flex;
-    align-items: center;
-    /* background-color:aqua; */
 }
 
 .img-fim{
@@ -134,10 +128,16 @@ footer{
     justify-content: end;
 }
 .img-fim img{ /*toda a imagem da classe img-fim*/
-    margin: 0 1rem;
+    margin: 0 0.3rem;
 }
 
-/* QUEM SOMOS */
+.alinhar_verticalmente{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+/* ---------- QUEM SOMOS ---------- */
 .centralizar_main{
     display:flex;
     flex-direction: column;
@@ -148,38 +148,31 @@ footer{
     
 }
 
-.centralizar_container{
+.container{  
     max-width: 650px;
     padding: 30px;   
 }
 
-.centralizar_titulo_q_somos{
+#titulo_q_somos{
     background-color: var(--primaria);
     width: 250px;
     margin-top:40px;
     margin-bottom: 5px;
-}
-
-.titulo_q_somos{
     padding: 3px;
 }
 
-.text_q_somos{
+#text_q_somos{
     margin-bottom: 40px;
     font-size: 25px;
 }
 
-.footer{
-    margin-top: 50px;
-}
-
-/* CONTATO */
+/* ----------- CONTATO ---------- */
 .alinhar_horizontalmente{  /*alinha os elementos horizontalmente*/
-    width:600px;
+    /* width:600px;
     margin:0px;
-    padding:0px;
+    padding:0px; */
     display:flex;
-    justify-content: center; /*não apagar*/
+    justify-content: center;
 }
 
 .logo_r_social{ /*redimensionar a logo das redes sociais*/
@@ -199,7 +192,7 @@ footer{
     font-size:30px;
 }
 
-/*FAVORITAR*/
+/*---------- FAVORITAR -----------*/
 .alinhar_barra_Lateral{
     display: flex;
     margin-top: 30px;
@@ -246,23 +239,9 @@ footer{
     height: 100%; 
     color: var(--terciaria);
     align-items:center;  
-    border-top-left-radius: 20px; /*não estava funcionando o border-top*/
+    border-top-left-radius: 20px; 
     border-top-right-radius: 20px;
 }
-
-/* .centralizar_icone_mais img{
-    display:flex;
-    width: 100%;
-    flex-direction:column;
-    justify-content:center;
-    
-} */
-/* .centralizar_icone_mais img:hover{
-    transform: scale(1.3); /* Aumenta o ícone em 20% 
-    filter: brightness(1.5); /* Aumenta o brilho, simulando uma mudança de cor 
-    
-} */
-
 
 .text_biblioteca_vazia{
     font-size:18px;
@@ -272,7 +251,7 @@ footer{
 
 /* ---------- LOGIN ------------ */
 /* Conteiner para por o formulario */
-.box_login {
+#box_login {
     
     background-color: var(--secundaria);
     padding: 20px;
@@ -298,8 +277,7 @@ input {
     margin-bottom: 10px; 
     border: 1px solid var(--terciaria); 
     border-radius: 5px; 
-    width:100%;
-    
+    width:100%;  
 }
 
 .botao_entrar{
@@ -331,8 +309,7 @@ input {
 
   
 /*---------- CADASTRO USUARIO ------------*/
-.box_cadastro {
-    
+#box_cadastro { 
     background-color: var(--secundaria);
     padding: 20px;
     border-radius: 25px;
@@ -369,24 +346,20 @@ a:hover {
     border-radius: 5px; 
    
 }
-/* ---------- Perfil Usuário -----------*/
-
-
-
-
-
-
 
 
 /* ---------EDITAR LIVROS e ADICIONAR LIVRO ---------- */
    /* Container Editar livros */
-
-
 .box_adm { /*container*/
     background-color: var(--secundaria);
+    border-radius:20px;
     /* padding: 20px;  */
     /* width: 50%; */
-    
+}
+.botao{
+    padding:5px; 
+    border:none;
+    margin:10px;
 }
 .titulo {  /*corrigir depois*/
    
@@ -419,12 +392,9 @@ a:hover {
 
 .form_adm_livro{
    display:flex;
-   
-
 }
 
 .input{
-   
     width: 70%;
     padding-right: 10px;
     padding-top:10px;
@@ -494,11 +464,6 @@ a:hover {
     justify-content: center;   
 }
 
-/* .upload_livro input{
-    display:none;
-    cursor: pointer;
-} */
- 
 .upload_livro input {
     display:none;
     
@@ -519,9 +484,10 @@ a:hover {
     
 
 /* GERENCIAR LIVRO */
+
 .box_gerenciar_livros{
     background-color:var(--secundaria);
-    border-radius:10px;
+    border-radius:10px;   
 }
 
 .box_gerenciar_livros .buttoes_vertical{
@@ -551,7 +517,7 @@ a:hover {
     filter: brightness(0.9);
 }
 
-.titulo_container a img:hover{
+.titulo_container .icone_retroceder:hover{
     border-radius:50%;
     background-color: var(--secundaria);
 }
@@ -642,7 +608,9 @@ a:hover {
  .alinha_text_esquerda{
     text-align: start;
     margin-bottom:5px;
+    
  }
+
 
  .moldura_perfil{
     width: 150px;
@@ -656,8 +624,6 @@ a:hover {
     font-size: 0.9em;
     color: var(--preto);
     margin: 0 auto 20px auto;
-    
-    /* position: relative; */
     cursor: pointer;
  }
 .botao_gravar{
@@ -703,7 +669,10 @@ a:hover {
     padding: 10px 20px; 
     border-radius: 5px;
     cursor: pointer;
-   
+}
+
+.botao_adicionar:hover{
+    filter: brightness(0.9);
 }
 
  .box_gerenciar_categorias{
@@ -728,4 +697,8 @@ a:hover {
     display:flex;
     justify-content:flex-end;
 } 
+
+.categorias_adicionadas img:hover{
+    cursor:pointer;
+}
 
