@@ -6,55 +6,41 @@
     --branco: white;
     --preto: black ;
 }
+ /* fonte do nome da biblioteca */
+.fonte_special_elite{
+    font-family: "Special Elite", system-ui;
+}
 
 *{ /*regras para todos*/
     margin:0; /*reseta a margem*/
     padding:0; /*reseta o padding*/
     box-sizing: border-box; /*calcula automaticmente as larguras considerando: conteúdo, bordas, margens e paddings*/
 }
-/* apagar todos esse codigos depois */
-/* .input_busca{
-    background-color: var(--primaria);
-    border:2px solid var(--preto);
-    border-radius: 50px;
-    width: 250px;
-} */
 
-/* .caixa_busca{
-    height: 45px;
+.caixa_busca{
+    height: 35px;
     display:flex;
     align-items: center;
     border: 1px solid var(--preto);
     padding: 10px;
     margin:5px;
     border-radius: 50px;
-} */
-/* .caixa_busca input{
-    /border:none;
-    outline: none;
-    flex:1;
+} 
+
+.caixa_busca input{
+    border:none; /*tira contorno da caixa*/
+    outline: none; /*tira o contorno da caixa quando ativa*/
+    height: 30px;
     padding: 10px;
     border-radius: 24px; 
-} */
-/* .caixa_busca .icone{
+    display:flex;
+    margin-top:10px;
+    margin-bottom: 10px;
+    background-color: var(--primaria);
+} 
+.icone_pesquisa img:hover{
     cursor:pointer;
-    /* margin-left: 10px; 
-    /* display:flex;
-    align-items: center; 
-} */
-
-/* .caixa_busca .icone img{
-    width: 20px;
-    height: 20px;
-    display:flex;
-    align-items: center;
-} */
-/* .caixa_busca{
-    margin:0px;
-    display:flex;
-    align-items: center;
-} */
-
+}
 
 /* seleciona o header e o footer, coloca cor de fundo e um espaçamento interno */
 header, footer{
@@ -130,7 +116,9 @@ footer{
 .img-fim img{ /*toda a imagem da classe img-fim*/
     margin: 0 0.3rem;
 }
-
+.img-fim img:hover{
+    cursor:pointer;
+}
 .alinhar_verticalmente{
     display: flex;
     align-items: center;

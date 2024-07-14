@@ -5,14 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estante web</title>
     <link rel="stylesheet" href="../css/style.css"> <!--Se conceta com CSS-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+    </style>
 
 </head>
 <body>
     <header> <!--Cabeça-->
         <div class="logo-busca">
-            <h1>Estante Web</h1> <!--Depois adciona a logo também-->
+            <h1 class="fonte_special_elite">Estante Web</h1> <!--Depois adciona a logo também-->
             <form action=""> <!--Formulário/ action: significa quem receberá-->
-                <input type="search" name="busca" id="busca"> <!--type=especifica que tipo de processamento nesse caso é de busca/ name="busca: identifica o campo de entrada -->
+                <div class="caixa_busca">
+                    <div class="icone_pesquisa">
+                        <img src="../imgs/busca.svg" alt="" width="20px" height ="20px"> 
+                    </div>
+                    <div class="alinhar_input">
+                        <input  type="search" name="busca" id="busca" >
+                    </div>
+                    <div class="icone_pesquisa">
+                        <img src="../imgs/microfone.svg" alt="" width="20px" height ="20px">
+                    </div>
+                </div>
             </form>
 
         </div>
