@@ -15,10 +15,11 @@
     <header> <!--Cabeça-->
         <div class="logo-busca">
             <h1 class ="fonte_special_elite">Estante Web</h1> <!--Depois adciona a logo também-->
-            <form action=""> <!--Formulário/ action: significa quem receberá-->
+            <form action="#" role="search"> <!--Formulário/ action: significa quem receberá/ role="search: tornar a pesquisa acessível"-->
 <!-- Depois apago -->
                 <div class="caixa_busca">
-                    <div class="icone_pesquisa">
+
+                    <!--<div class="icone_pesquisa">
                         <img src="imgs/busca.svg" alt="" width="20px" height ="20px"> 
                     </div>
                     <div class="alinhar_input">
@@ -26,12 +27,17 @@
                     </div>
                     <div class="icone_pesquisa">
                         <img src="imgs/microfone.svg" alt="" width="20px" height ="20px">
-                    </div>
+                    </div> -->
+                    <button type="submit" class="icone_pesquisa">
+                        <img src="imgs/busca.svg" alt="Buscar" width="20" height="20">
+                    </button>
+                    <input type="search" name="busca" id="busca" placeholder="Pesquise por título,autor...">
+                    <button type="button" class="icone_pesquisa">
+                        <img src="imgs/microfone.svg" alt="Pesquisar por voz" width="20" height="20">
+                    </button>
                 </div>
-
                 <!--type=especifica que tipo de processamento nesse caso é de busca/ name="busca: identifica o campo de entrada -->
             </form>
-
         </div>
     </header>
     <nav> <!--seção de navegação-->
@@ -44,8 +50,8 @@
     </nav>
     
     <main id="index">
-
-    </main> <!--principal-->
+        <!-- Conteúdo principal -->
+    </main> 
     
     <footer>
         <div id="copy">

@@ -18,13 +18,21 @@
 }
 
 .caixa_busca{
-    height: 35px;
+    /* height: 35px;
     display:flex;
     align-items: center;
     border: 1px solid var(--preto);
     padding: 10px;
     margin:5px;
+    border-radius: 50px; */
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--preto);
     border-radius: 50px;
+    padding: 5px 10px;
+    margin: 5px;
+    height: 35px;
+
 } 
 
 .caixa_busca input{
@@ -37,9 +45,25 @@
     margin-top:10px;
     margin-bottom: 10px;
     background-color: var(--primaria);
+    color: var(--branco);    
 } 
+/* Define a cor do placeholder */
+.caixa_busca input::placeholder {
+    color: var(--branco); /* Altera a cor para branco */
+    opacity: 0.5; /* Garantir que a cor esteja visível */
+    font-size:12px;
+}
 .icone_pesquisa img:hover{
     cursor:pointer;
+}
+.icone_pesquisa{
+    background: none;
+    border: none;
+}
+.logo-busca{
+    display: flex; /*transforma os elemento em um contêiner flexível*/
+    justify-content: space-between; /*alinha os itens ao longo do eixo principal com espaço entre eles.*/
+    align-items: center; /*alinha os itens ao centro de cima pra baixo (verticalmente) */
 }
 
 /* seleciona o header e o footer, coloca cor de fundo e um espaçamento interno */
@@ -72,11 +96,7 @@ nav a:hover{
 }
 
 /* qualque item com essa classe muda o display para flex, coloca o espaço vazio da horizontal no meio dos elementos, alinha os itens na vertical com base no seu centro */
-.logo-busca{
-    display: flex; /*transforma os elemento em um contêiner flexível*/
-    justify-content: space-between; /*alinha os itens ao longo do eixo principal com espaço entre eles.*/
-    align-items: center; /*alinha os itens ao centro de cima pra baixo (verticalmente) */
-}
+
 
 body{
     display:flex;
@@ -87,8 +107,7 @@ body{
 main{
     
     flex-grow: 1;
-    background-color: var(--terciaria);
-    
+    background-color: var(--terciaria); 
 }
 
 #index{
