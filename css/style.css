@@ -102,6 +102,7 @@ body{
     display:flex;
     flex-direction: column; /* os itens são organizados em uma única coluna, do topo para o fundo do container.*/
     min-height: 100vh; /*O valor 100vh significa que o container terá no mínimo a altura da tela inteira do dispositivo do usuário  (vh significa "viewport height", ou altura da janela de visualização).*/
+    min-width: 320px; /*largura minima para mobile*/
 }
 
 main{
@@ -311,6 +312,7 @@ input {
 
 .cadastro-link  {
     margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 
@@ -544,7 +546,10 @@ a:hover {
 /* ---------PERFIL  ---------- */
 .box_perfil{
     background-color: var(--secundaria);
-    width: 500px;
+    max-width: 500px;
+    min-width: 100px;
+
+    /* width:100%; */
     display:flex;
     align-items: center;
     
@@ -660,6 +665,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
       
 } 
 
@@ -708,4 +714,155 @@ a:hover {
 .categorias_adicionadas img:hover{
     cursor:pointer;
 }
+.sem_formatacao_botao {
+    background: none;
+    border: none;
+}
+.botao_adicionar{
+    font-size:12px;
+    padding:10px;
 
+}
+
+
+/* --------MEDIA QUERY -------- */
+@media screen and (max-width: 556px) {
+    /*------- CLASSES GERAIS ------*/
+    /* Caixa de pesquisa */
+    .logo-busca h1 {
+        font-size: 1.2rem;
+        white-space: nowrap; /* Garante que o texto não quebre linha */
+        margin-right: 10px; /* Espaço entre título e caixa de busca */
+        
+    }
+    .caixa_busca{
+        width:100%;
+       
+    }
+    .caixa_busca input::placeholder {
+        font-size:11px;   
+    }
+    /* Barra de navegação */
+    nav a {
+        white-space: nowrap;
+        font-size: 0.7rem; /* Reduz o tamanho da fonte dos links */
+        padding: 0.2rem 0.4rem; /* Ajusta o padding dos links */
+    }
+
+    nav {
+        gap: 0.15rem; /* Mais redução do espaço entre itens */
+    }
+    /* Foother-Rodapé */
+    footer {
+        white-space: nowrap;
+        align-items: center;
+        gap: 0.5rem; /* Reduz o espaço entre os elementos no footer */
+    }
+
+    footer div {
+        font-size: 0.7rem; /* Reduz a fonte no footer */
+    }
+    .img-fim img{
+        width:20px;
+        height: 20px;
+    }
+    /*---- VIEW: QUEM SOMOS ----*/
+    #titulo_q_somos{
+        white-space: nowrap;
+        width:40%;
+        font-size:20px;
+    }
+    #text_q_somos{
+        font-size:16px;
+    }
+
+     /*---VIEW: PERFIL----*/
+    .box_perfil {
+        max-width: 90%;
+        margin: 0 auto; /* Centraliza a caixa no viewport */
+        padding: 10px;
+        display:flex;
+        flex-direction:column;
+        
+    }
+
+    .moldura_perfil {
+        width: 100px;
+        height: 100px;
+    }
+
+    .botoes_gerenciar {
+        padding: 10px;
+        width: 50%;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        white-space: nowrap;
+        font-size:11px;
+    }
+    .alinhar_coluna_direita span{
+        font-size:12px;
+        margin-left:10px;
+        padding:10px;
+    }
+
+    .botao_gravar {
+        display:flex;
+        justify-content: center;
+        padding: 10px;
+        width: 50%; 
+    }
+    /* ------- LOGIN ------ */
+    .box_login{
+       
+        margin: 0 auto; /* Centraliza a caixa no viewport */
+        margin-top:10px;
+        margin-bottom: 10px;
+    }
+
+    /* #formatacao_input input{
+        width: 50px;
+    }  */
+    /* ------VIEW: GERENCIAR CATEGORIAS ---- */
+    .box_gerenciar_categorias{
+        max-width: 90%;
+        margin: 0 auto; /* Centraliza a caixa no viewport */
+        display:flex;
+        flex-direction:column;
+        margin-top:10px;
+        margin-bottom: 10px;
+        margin-right: 20px;
+    }
+    .box_titulo{
+        width: 100%;
+    }
+
+    .titulo_gerenciar_categorias{
+        white-space: nowrap;
+        font-size:12px;
+    }
+    /* ----VIEW: GERENCIAR LIVROS ---- */
+    .box_gerenciar_livros{
+        max-width: 90%;
+        margin: 0 auto; /* Centraliza a caixa no viewport */
+        margin-top:10px;
+        margin-bottom: 10px;
+    }
+   .buttoes_vertical{
+    width: 100%;
+    white-space: nowrap;
+
+   }
+   .titulo_container img{
+    width: 20px;
+    height: 20px;
+    
+   }
+   .titulo_container h2{
+    font-size:20px;
+    margin-right: 10px;
+    margin-left:5px;
+   }
+}
+
+   
