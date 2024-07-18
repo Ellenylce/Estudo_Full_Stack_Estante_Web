@@ -872,6 +872,57 @@ a:hover {
     /* margin-right: 10px;
     margin-left:5px; */
    }
+
+
+   /* VIEW: EDITAR LIVROS */
+   .box_adm{
+        max-width: 90%;
+        margin: 0 auto; /* Centraliza a caixa no viewport */
+        display:flex;
+        flex-direction:column;
+        margin-top:10px;
+        margin-bottom: 10px;
+        margin-right: 20px;
+   }
+   .titulo h2{
+    font-size: 20px;
+   }
+
+   /* ----VIEW:EDITAR CATEGORIAS----- */
+   .box_gerenciar_livros{
+        max-width: 90%;
+        margin: 0 auto; /* Centraliza a caixa no viewport */
+        display:flex;
+        flex-direction:column;
+        margin-top:10px;
+        margin-bottom: 10px;
+        margin-right: 20px;
+   }
+   .titulo_container h2{
+        font-size:20px;
+   }
+  
+   /* ----VIEW: CONTATO ---- */
+   .alinhar_horizontalmente a{
+        font-size:20px;
+   }
+   .alinhar_horizontalmente img{
+    width: 25px;
+    height: 25px;
+   }
+
+   /* ----VIEW:CADASTRO ---- */
+   #box_cadastro{
+    width: 90%;
+    margin: 0 auto; /* Centraliza a caixa no viewport */
+    margin-top:10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+   }
+   #box_cadastro button{
+    width: 50%;
+    font-size:12px;
+   }
 }
 
    
