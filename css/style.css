@@ -725,6 +725,7 @@ a:hover {
 }
 
 
+
 /* --------MEDIA QUERY -------- */
 @media screen and (max-width: 556px) {
     /*------- CLASSES GERAIS ------*/
@@ -783,6 +784,9 @@ a:hover {
         padding: 10px;
         display:flex;
         flex-direction:column;
+        margin-top:10px;
+        margin-bottom: 10px;
+        border-radius:10px;
         
     }
 
@@ -841,27 +845,32 @@ a:hover {
         white-space: nowrap;
         font-size:12px;
     }
+
+
     /* ----VIEW: GERENCIAR LIVROS ---- */
     .box_gerenciar_livros{
-        max-width: 90%;
+        /* max-width: 100%; */
+        width: 350px;
         margin: 0 auto; /* Centraliza a caixa no viewport */
         margin-top:10px;
         margin-bottom: 10px;
     }
+
    .buttoes_vertical{
     width: 100%;
     white-space: nowrap;
-
    }
+
    .titulo_container img{
     width: 20px;
     height: 20px;
     
    }
+
    .titulo_container h2{
     font-size:20px;
-    margin-right: 10px;
-    margin-left:5px;
+    /* margin-right: 10px;
+    margin-left:5px; */
    }
 }
 
