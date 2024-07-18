@@ -206,6 +206,18 @@ footer{
     margin-top: 30px;
     padding:0;
 }
+/* .barra_menu_categoria{
+   
+    display:flex;
+    align-items: center;
+    height: 100%;
+    margin-top: 30px;
+    padding:0; 
+} */
+
+.menu-categorias{
+    display:none;
+}
 
 .barra_Lateral{
     background-color:var(--secundaria);
@@ -239,16 +251,18 @@ footer{
 
 .box_books{
     background-color: var(--secundaria); 
-    margin-left: 220px; /*ajustar a margem a esquerda */
-    width: 1100px; /*estudar e por responsividades aqui*/
-    margin-right: 50px; /*ajustar a margem a direita */
+    margin-left: 220px; /*ajustar a margem a esquerda*/
+    /* width: 1100px; estudar e por responsividades aqui */
+    width: 100%;
+    margin-right: 20px; /*ajustar a margem a direita */
     display:flex;
     justify-content:center;
-    height: 100%; 
+    height: 400px; 
     color: var(--terciaria);
     align-items:center;  
-    border-top-left-radius: 20px; 
-    border-top-right-radius: 20px;
+    border-radius:20px;
+    /* border-top-left-radius: 20px; 
+    border-top-right-radius: 20px; */
 }
 
 .text_biblioteca_vazia{
@@ -448,7 +462,6 @@ a:hover {
 }
 
 .upload_livro{
-    
     background-color: #9b9191;
     /* padding:10px; */
     width: 136px;
@@ -474,8 +487,7 @@ a:hover {
 }
 
 .upload_livro input {
-    display:none;
-    
+    display:none; 
 }
 
 .livro_input{
@@ -511,9 +523,7 @@ a:hover {
    align-items: center;
    padding: 10px;
    margin:0px;
-   background-color: var(--primaria);
-   /* border-radius: 5px; */
-   
+   background-color: var(--primaria); 
 }
 
 .buttoes_vertical{ /*DEPOIS MUDO ISSO PARA ALINHAR VERTICAL*/
@@ -548,8 +558,6 @@ a:hover {
     background-color: var(--secundaria);
     max-width: 500px;
     min-width: 100px;
-
-    /* width:100%; */
     display:flex;
     align-items: center;
     
@@ -558,23 +566,15 @@ a:hover {
    display:flex;
    flex-direction: column;
    width: 300px;
-   /* background-color:aqua; */
+   
   
 }
-/* .alinhar_coluna_esquerda img{
-    display:flex;
 
-} */
 .alinhar_coluna_esquerda p{
     margin-bottom:30px;
     
 }
-/* .alinhar_coluna_esquerda{
-    display:flex;
-    height: 100%;
-    /* align-items: center; 
-    
-} */
+
 .botao_container{
     display: flex;
     justify-content: space-evenly;
@@ -923,6 +923,20 @@ a:hover {
     width: 50%;
     font-size:12px;
    }
+/* --- LIVROS FAVORITOS ----- */
+  .barra_Lateral{
+    Display:none;
+  }
+  .box_books{
+    max-width: 90%;
+    margin: 0 auto; /* Centraliza a caixa no viewport */
+    margin-bottom: 25px;
+  }
+
+  .menu-categorias{
+    display:flex;
+    background-color:#9b9191;
+ }
 }
 
    
