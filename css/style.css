@@ -257,7 +257,7 @@ footer{
     margin-right: 20px; /*ajustar a margem a direita */
     display:flex;
     justify-content:center;
-    height: 400px; 
+    height: 700px; 
     color: var(--terciaria);
     align-items:center;  
     border-radius:20px;
@@ -355,6 +355,7 @@ a:hover {
 
 .privacidade_link{
     font-size:15px;
+    /* margin-bottom:20px; */
 }
 
 /* Upload de foto de usuario */
@@ -923,6 +924,11 @@ a:hover {
     width: 50%;
     font-size:12px;
    }
+   
+   /* .privacidade_link a{
+    margin-bottom:20px;
+   } */
+
 /* --- LIVROS FAVORITOS ----- */
   .barra_Lateral{
     Display:none;
