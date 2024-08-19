@@ -12,6 +12,7 @@
 }
 
 *{ /*regras para todos*/
+  
     margin:0; /*reseta a margem*/
     padding:0; /*reseta o padding*/
     box-sizing: border-box; /*calcula automaticmente as larguras considerando: conteúdo, bordas, margens e paddings*/
@@ -104,21 +105,24 @@ nav a:hover{
 body{
     display:flex;
     flex-direction: column; /* os itens são organizados em uma única coluna, do topo para o fundo do container.*/
-    min-height: 100vh; /*O valor 100vh significa que o container terá no mínimo a altura da tela inteira do dispositivo do usuário  (vh significa "viewport height", ou altura da janela de visualização).*/
+    height: 100vh; /*O valor 100vh significa que o container terá no mínimo a altura da tela inteira do dispositivo do usuário  (vh significa "viewport height", ou altura da janela de visualização).*/
     min-width: 320px; /*largura minima para mobile*/
 }
 
 main{
     
     flex-grow: 1;
-    background-color: var(--terciaria); 
+    background-color: var(--terciaria);
+    /* adicionei */
+    min-height: 100% vh;
 }
 
 #index{
     
     margin: 0 auto;
     width: 95%;
-    height: 100% vh;
+    min-height: 100% vh;
+    
 
     /* Imagem no index */
     /* background-image: url("../imgs/biblioteca.jpg");
@@ -132,6 +136,10 @@ footer{
     grid-template-columns: repeat(3, 1fr);
     color: var(--branco);
     text-align:center;
+
+    
+    position: sticky;
+    bottom: 0;
 }
 
 #copy{
@@ -156,126 +164,15 @@ footer{
 
 /* ---------- INDEX ---------*/
 
-/* .carrossel-container {  /* estilizar o contêiner principal do 'slideshow'.*
-    display:flex;
-    justify-content: center;
-    margin-top:30px;
-
-    background-color: var(--primaria);
-    max-width: 70%; /* É definida a largura máxima do contêiner como 100% em relação ao pai*
-    position: relative; 
-    /*É definida a posição como 'relativa'. Desta forma os elementos filhos com 'position: absolute' podem ser posicionados em relação a este contêiner.*
-    margin: auto;
-     /*Posiciona o container no centro da página. *
-}
-
-.carrossel-livros {
-   padding:20px;
-    /* display: none;  */
-    /*Cada slide fica inicialmente oculto com display: none;.*
-}
-
-/*Estiliza (anterior e próximo)*
-.botao-anterior,
-.botao-proximo {
-    
-
-    cursor: pointer; /*Altera o cursor para uma mão*
-    position: absolute; /*é posicionado de forma absoluta em relação ao contêiner pai (slideshow-container).*
-    top: 50%; /*é posicionado verticalmente no meio do contêiner.*
-    width: auto; /*A largura é ajustada automaticamente com base no conteúdo*
-    margin-top: -22px; /*Move para cima em 22px.*
-    padding: 16px; /*Adiciona preenchimento interno de 16px*
-    color: white; /* Define a cor do texto como branca*
-    font-weight: bold; /* negrito.*
-    font-size: 18px; /*define tamanho da fonte de 18px*
-    transition: 0.6s ease; /*Adiciona uma transição 'suave*
-    border-radius: 0 3px 3px 0; /*Põe borda, arredondando apenas os cantos direito*
-    user-select: none; /*controla se o usuário pode selecionar o texto, neste caso o usuário não pode selecionar o texto*
-}
-
-.botao-proximo { /*estiliza '.próximo'"*
-    right: 0; /*Posiciona à direita do contêiner*
-    border-radius: 3px 0 0 3px; /*põe borda, arredondando apenas os cantos esquerdos*
-}
-
-.botao-anterior{
-   
-    left:0;
-}
-
-/* Quando o mouse é passado sobre .anterior e .proximo os mesmos são estilizados - Altera a cor de fundo quando o mouse passa sobre eles, adicionando um fundo preto com 80% de opacidade (0.8). *
-.botao-anterior:hover,
-.botao-proximo:hover {
-    background-color: rgba(0, 0, 0, 0.8); 
-}
-
-/*.text é estilizada*
-.titulo-livro {
-    color: #f2f2f2; /*Define a cor*
-    font-size: 15px; /*Define o tamanho da fonte*
-    padding: 8px 12px; /*Adiciona preenchimento ao redor do texto
-    position: absolute; /*é posicionado de forma absoluta *
-    bottom: 8px; /*Alinha o texto na parte inferior do slide*
-    width: 100%; /* Ocupa toda a largura do slide*
-    text-align: center; /*Centraliza o texto horizontalmente.*
-}
-
-/*Estiliza a ".numbertest"(o texto que mostra o número do slide atual e o total)*
-.num-text {
-    color: #f2f2f2; /*Define a cor*
-    font-size: 12px; /*tamanho da fonte*
-    padding: 8px 12px; /*Espaçamento interno*
-    position: absolute; /*posiciona de forma absoluta*
-    top: 0; /* é posicionado ao topo *
-}
-
-/* Estiliza .ponto (define a aparência dos pontos de navegação que indicam a posição do slide)
-.ponto {
-    cursor: pointer; /*altera o cursor para uma mão ao passar o curso ao ponto*
-    height: 15px; define a altura do ponto*
-    width: 15px; define a largura do ponto*
-    margin: 0 2px; Aplica margem de 2px para os lados esquerdo e direito*
-    background-color: #bbb; /*aplica cor de fundo*
-    border-radius: 50%; /*arrendonda em 50% para criar uma forma circular*
-    display: inline-block; /*Faz com que os pontos sejam exibidos na mesma linha
-    transition: background-color 0.6s ease; /*aplica transição suave a cor de fundo
-}
-
-/* Estiliza .active e .ponto
-.active: Define a cor de fundo do ponto ativo (indicando o slide atual);
-.ponto:hover: Define a cor de fundo do ponto quando o mouse passa sobre ele.
-.active,
-.ponto:hover {
-    background-color: #717171; Altera a cor de fundo dos pontos quando estão ativos (.active) ou quando o mouse passa sobre eles (:hover)
-}
-
-/*  Aplica a animação de desvanecimento aos slides 
-.animacao-fade {
-    animation-name: fade; Define o nome da animação a ser usada
-    animation-duration: 2.5s;  Define a duração da animação para 2,5 segundos.
-}
-
-@keyframes animacao-fade { /a palavra chave '@keyframes" define a animação chamada ffade/
-    from {
-        opacity: .2 *Define a opacidade inicial como 0.2 (quase transparente)
-    }
-
-    to {
-        opacity: 1 Define a opacidade final como 1 (totalmente visível)
-    }
-}  */
-
-/*  INDEX youtube */
-
-
+/*  INDEX CARROSSEL */
 #body-index{
+   
     margin:0;
     padding:0;
     width: 100%;
     margin-top: 30px;
     /* height: 300px; */
-    height: 100vh;
+    min-height: 100vh;
     /* display:flex;
     justify-content: center;
     align-items:center; */
@@ -373,8 +270,72 @@ footer{
 #radio3:checked ~ .navigation-auto .auto-btn3{
     background-color:var(--branco);
 } 
+/* Fim código Carrossel
 
-/* Fim youtube
+/* --------- CODIGO ACERVO DE LIVROS --------- */
+
+/* Utilizando API OPEN LIBRARY */
+/* Estilos CSS */
+.container-livros {
+    /* background-color: aqua; */
+    
+    margin: 0 auto;
+    width:100%;
+    /* height: 100vh; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap:2px;
+
+}
+
+.livro {
+   
+    margin:10px;
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.capa-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+.capa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    /* object-fit: contain; */
+}
+.sem-capa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.info-livro {
+    
+    width: 100%;
+    background:var(--primaria);
+    padding:5px;
+    margin:0px;
+    border-radius:10px;
+    margin-top:30px;
+    text-align: left;
+}
+
+.info-livro h3, p{
+    white-space: nowrap; /* Impede a quebra de linha no texto */
+    overflow:hidden; /* Oculta o texto que ultrapassa o limite do contêiner*/
+    text-overflow: ellipsis; /* Adiciona reticências (...) para indicar texto cortado */
+}
+/* Fim código acervo livros */
+
 
 /* ---------- QUEM SOMOS ---------- */
 .centralizar_main{
