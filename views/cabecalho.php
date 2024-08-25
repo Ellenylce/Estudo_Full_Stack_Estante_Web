@@ -1,5 +1,7 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/auth/auth.php';
+?>
 
-<!-- Cabeçalho único -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -49,48 +51,5 @@
         <a href="views/contato.php">Contato</a>
         <a href="views/favoritos.php" class="alinhar_verticalmente"><img src="imgs/star.png" alt="" width="20px" height ="20px">Favoritos</a>
         <a href="views/login.php">Login</a>
+
     </nav>
-    <!-- Finaliza cabeçalho -->
-    
-    <!-- BODY -->
-    <main id="index">
-   
-    <!-- vai conter o carrossel e os livros -->
-    <section id = "body-index">
-    <?php
-    //  -- Inicio carrossel --
-    require_once 'carrossel_livros.php';
-    // -- fim carrossel --
-    // Consumo de API de livros
-    require_once 'consumo_api.php';
-    // Fim do codigo API
-    ?>  
-    </section>
-    <!-- FIM do codigo -->
-
-       
-
-    
-
-    </main> 
-    
-
-
-    <footer>
-        <div id="copy">
-            &copy; Estante Web
-        </div>
-        <div>
-            Todos os direitos reservados
-        </div>
-        <div class="img-fim">
-            <a href="https://www.instagram.com/"><img src="imgs/facebook.svg"alt="" width="30px" height="30px"></a>
-            <a href="https://www.facebook.com/"><img src="imgs/instagram.svg"alt="" width="30px" height="30px"></a>
-        </div>
-    </footer> <!--rodapé-->
-    
-</body>
-</html>
-
-
-

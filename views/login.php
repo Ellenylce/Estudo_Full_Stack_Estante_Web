@@ -31,11 +31,11 @@
         </div>
     </header>
     <nav> <!--seção de navegação-->
-        <a href="../index.html">Início</a> <!--links das seções-->
-        <a href="quem_somos.html">Quem Somos</a>
-        <a href="contato.html">Contato</a>
-        <a href="favoritos.html" class="alinhar_verticalmente"><img src="../imgs/star.png" alt="" width="20px" height ="20px">Favoritos</a>
-        <a href="login.html">Login</a>
+        <a href="../index.php">Início</a> <!--links das seções-->
+        <a href="quem_somos.php">Quem Somos</a>
+        <a href="contato.php">Contato</a>
+        <a href="favoritos.php" class="alinhar_verticalmente"><img src="../imgs/star.png" alt="" width="20px" height ="20px">Favoritos</a>
+        <a href="login.php">Login</a>
     </nav>
     
     <!--Meu código-->

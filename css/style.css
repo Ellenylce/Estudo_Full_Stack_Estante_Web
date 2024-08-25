@@ -329,7 +329,7 @@ footer{
     text-align: left;
 }
 
-.info-livro h3, p{
+ .quebra_linha{
     white-space: nowrap; /* Impede a quebra de linha no texto */
     overflow:hidden; /* Oculta o texto que ultrapassa o limite do contêiner*/
     text-overflow: ellipsis; /* Adiciona reticências (...) para indicar texto cortado */
