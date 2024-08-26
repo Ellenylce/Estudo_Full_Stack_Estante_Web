@@ -1,84 +1,34 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estante web</title>
-    <link rel="stylesheet" href="../css/style.css"> <!--Se conceta com CSS-->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-    </style>
-
-</head>
-<body>
-    <header> <!--Cabeça-->
-        <div class="logo-busca">
-            <h1 class="fonte_special_elite">Estante Web</h1> <!--Depois adciona a logo também-->
-            <form action=""> <!--Formulário/ action: significa quem receberá-->
-                <div class="caixa_busca">
-                    <div class="icone_pesquisa">
-                        <img src="../imgs/busca.svg" alt="" width="20px" height ="20px"> 
-                    </div>
-                    <div class="alinhar_input">
-                        <input  type="search" name="busca" id="busca" >
-                    </div>
-                    <div class="icone_pesquisa">
-                        <img src="../imgs/microfone.svg" alt="" width="20px" height ="20px">
-                    </div>
-                </div>
-            </form>
-
-        </div>
-    </header>
-    <nav> <!--seção de navegação-->
-        <a href="../index.php">Início</a> <!--links das seções-->
-        <a href="quem_somos.php">Quem Somos</a>
-        <a href="contato.php">Contato</a>
-        <a href="favoritos.php" class="alinhar_verticalmente"><img src="../imgs/star.png" alt="" width="20px" height ="20px">Favoritos</a>
-        <a href="login.php">Login</a>
-    </nav>
+<?php require_once 'cabecalho.php';?>
     
-    <!--Meu código-->
-    <main class="centralizar_main"> <!--principal-->
+    <!--BODY-->
+    <main class="centralizar_main">
 
         <div id="box_login">
             <form id="formatacao_input">
                 <h4>Acesse sua conta</h4>
                   <!--Campo Email-->
-                <h5 class="alinha_label"><label for="email">Email:</label></h5>
+                <h5 class="alinha_label">
+                    <label for="email">Email:</label>
+                </h5>
                 <input type="email"  name="email" id="email" placeholder="Digite seu email ">
                 <!--Campo Senha-->
-                <h5><label class="alinha_label" for="senha">Senha:</label></h5>
+                <h5>
+                    <label class="alinha_label" for="senha">Senha:</label>
+                </h5>
                 <input type="password"  name="senha" id="senha" placeholder="Digite sua senha">
                 <!--Botão de Entrar-->
                 <button class="botao_entrar" type="submit">ENTRAR</button>
             </form>
             <!--Links inferiores-->
             <div class="esqueceu_senha">
-                <a  href="#Esqueceu_senha.html" >Esqueceu sua senha?</a>
+                <a  href="#Esqueceu_senha.php" >Esqueceu sua senha?</a>
             </div>
-
             <div class="cadastro-link">
                 <p >Você ainda não se cadastrou? </p>
-                <a href="cadastro.html">Crie sua conta aqui</a>
+                <a href="cadastro.php">Crie sua conta aqui</a>
             </div>
         </div>
-
     </main> 
+<!-- Finaliza body -->
 
-
-    <footer>
-        <div id="copy">
-            &copy; Estante Web
-        </div>
-        <div>
-            Todos os direitos reservados
-        </div>
-        <div class="img-fim">
-            <img src="../imgs/facebook.svg"alt="" width="30px" height="30px">
-            <img src="../imgs/instagram.svg"alt="" width="30px" height="30px">
-        </div>
-    </footer> <!--rodapé-->
-    
-</body>
-</html>
+<?php require_once 'rodape.php';?>
