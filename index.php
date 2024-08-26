@@ -18,19 +18,10 @@
     <header> <!--Cabeça-->
         <div class="logo-busca">
             <h1 class ="fonte_special_elite">Estante Web</h1> <!--Depois adciona a logo também-->
-            <form role="search" action="" method="get"> <!--Formulário/ action: significa quem receberá/ role="search: tornar a pesquisa acessível"-->
-<!-- Depois apago -->
+            <form role="search" action="" method="get"> 
+                <!--Formulário/ action: significa quem receberá/ role="search: tornar a pesquisa acessível"-->
                 <div class="caixa_busca">
 
-                    <!--<div class="icone_pesquisa">
-                        <img src="imgs/busca.svg" alt="" width="20px" height ="20px"> 
-                    </div>
-                    <div class="alinhar_input">
-                        <input  type="search" name="busca" id="busca" >
-                    </div>
-                    <div class="icone_pesquisa">
-                        <img src="imgs/microfone.svg" alt="" width="20px" height ="20px">
-                    </div> -->
                     <button type="submit" class="icone_pesquisa">
                         <img src="imgs/busca.svg" alt="Buscar" width="20" height="20">
                     </button>
@@ -43,14 +34,27 @@
             </form>
         </div>
     </header>
-    <nav> <!--seção de navegação-->
-        <a href="index.php">Início</a> <!--links das seções-->
-        <a href="views/quem_somos.php">Quem Somos</a>
-        <a href="views/contato.php">Contato</a>
-        <a href="views/favoritos.php" class="alinhar_verticalmente"><img src="imgs/star.png" alt="" width="20px" height ="20px">Favoritos</a>
-        <a href="views/login.php">Login</a>
-    </nav>
-    <!-- Finaliza cabeçalho -->
+
+    <section class = "botton-header">
+        <nav> 
+            <ul>
+                <li><a href="../index.php">Início</a></li> <!--links das seções-->
+                <li><a href="views/quem_somos.php">Quem Somos</a></li>
+                <li><a href="views/contato.php">Contato</a></li>
+                <li class = "alinhar_imagem">
+                        <a href="views/favoritos.php" class = "text"><img src="imgs/star.png" alt="" width="20px" height ="20px" style="margin-left: 10px;" class = "imagem_alinhar">Favoritos
+                    </a>
+                </li>
+                <li class = "drop-hover alinhar_imagem"><a href="#" class = "text" >Olá, usuário <i class="bi bi-caret-down-fill imagem_drop"></i></a>
+                    <div class = "drop">
+                        <a href="views/login.php">Login</a>
+                        <a href="views/cadastro.php">Cadastro</a>
+                    </div>
+                <li>
+            </ul>
+        </nav>
+    </section>
+  
     
     <!-- BODY -->
     <main id="index">
