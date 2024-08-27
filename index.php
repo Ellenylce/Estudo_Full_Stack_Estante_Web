@@ -1,4 +1,8 @@
 
+<?php 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/auth/auth.php';
+?>
+
 <!-- Cabeçalho único -->
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -45,12 +49,21 @@
                         <a href="views/favoritos.php" class = "text"><img src="imgs/star.png" alt="" width="20px" height ="20px" style="margin-left: 10px;" class = "imagem_alinhar">Favoritos
                     </a>
                 </li>
-                <li class = "drop-hover alinhar_imagem"><a href="#" class = "text" ><?= $_SESSION['nome_doador'] ?> <i class="bi bi-caret-down-fill imagem_drop"></i></a>
+                <!-- Se estiver logado  -->
+                <?php if(Auth:: estarLogado()) : ?>
+                <li><a href="views/perfil_user.php"> Olá, <?= $_SESSION['nome_user'] ?> </a></li>
+                <?php else : ?>
+                    <!-- se não estiver logado -->
+                <li class = "drop-hover alinhar_imagem"><a href="#" class = "text" > Olá, usuário <i class="bi bi-caret-down-fill imagem_drop"></i></a>
                     <div class = "drop">
                         <a href="views/login.php">Login</a>
                         <a href="views/cadastro.php">Cadastro</a>
                     </div>
                 <li>
+                <?php endif;?> 
+
+                <!-- Logout -->
+                <li><a href="/ellen_karla/Estante-Web/controllers/logout_controller.php">Sair</a></li>
             </ul>
         </nav>
     </section>

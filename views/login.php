@@ -15,14 +15,14 @@
                 <h4>Acesse sua conta</h4>
                   <!--Campo Email-->
                 <h5 class="alinha_label">
-                    <label for="email_login">Email:</label>
+                    <label for="email_user">Email:</label>
                 </h5>
-                <input type="email" name="email_login" id="email_login" placeholder="Digite seu email ">
+                <input type="email" name="email_user" placeholder="Digite seu email ">
                 <!--Campo Senha-->
                 <h5>
-                    <label class="alinha_label" for="senha_login">Senha:</label>
+                    <label class="alinha_label" for="senha_user">Senha:</label>
                 </h5>
-                <input type="password" name="senha_login" id="senha_login" placeholder="Digite sua senha">
+                <input type="password" name="senha_user" placeholder="Digite sua senha">
                 <!--Botão de Entrar-->
                 <button class="botao_entrar" type="submit">ENTRAR</button>
             </form>

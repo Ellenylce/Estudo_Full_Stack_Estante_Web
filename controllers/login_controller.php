@@ -1,8 +1,8 @@
 <?php
     require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/auth/auth.php';
 
-    $email_login = $_POST['email_login'];
-    $senha_login = $_POST['senha_login'];
+    $email_user = $_POST['email_user'];
+    $senha_user = $_POST['senha_user'];
 
-    Auth::login($email_login, $senha_login);
+    Auth::login($email_user, $senha_user);
 ?>

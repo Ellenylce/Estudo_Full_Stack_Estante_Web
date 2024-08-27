@@ -18,6 +18,8 @@ class Auth
             $stmt->execute();
 
             $resultado = $stmt->fetch();
+            // var_dump($resultado);
+            // exit();
 
             //Verifica se o usuario existe no Banco de dados e se a senha está correta
             if (!empty($resultado) && password_verify($senha_user, $resultado['senha_user'])) {
@@ -25,7 +27,7 @@ class Auth
                 $_SESSION['nome_user'] = $resultado['nome_user'];
                 $_SESSION['email_user'] = $resultado['email_user'];
                
-                header('/ellen_karla/Estante-Web/index.php');
+                header('Location: /ellen_karla/Estante-Web/index.php');
                 exit();
             } else {
                 setcookie('aviso', 'certifique-se se seu E-mail ou a Senha estão corretos!!!', time() + 3600, '/ellen_karla/');
