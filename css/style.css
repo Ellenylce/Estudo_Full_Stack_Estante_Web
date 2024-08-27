@@ -219,14 +219,41 @@ footer{
 }
 
 /* ---------- INDEX ---------*/
+/* Filtrar generos */
+.filtrar-genero {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #452a05a8;
+    padding: 10px; 
+  }
+
+  .filtrar-genero ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  .botao-genero {
+    padding:10px;
+    margin:2px;
+    background-color: #804408; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+  }
+  
+  .botao-genero:hover {
+    background-color: #666;
+  }
 
 /*  INDEX CARROSSEL */
 #body-index{
-   
-    /* adicionei */
-
-
-    /* finalizei */
     margin:0;
     padding:0;
     width: 100%;
@@ -838,16 +865,20 @@ a:hover {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    margin-bottom: 20px;
+   
 }
 .botoes_gerenciar{
     background-color: var(--primaria); 
     color: var(--branco);
     border: none;
-    padding: 5px 5px; 
+    /* padding: 5px 5px;  */
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    /* margin-bottom: 10px;
+    margin-top: 10px; */
+   
+    
 
 }
 
@@ -894,7 +925,7 @@ a:hover {
     align-items: center;
     font-size: 0.9em;
     color: var(--preto);
-    margin: 0 auto 20px auto;
+    margin: 0 auto 10px auto;
     cursor: pointer;
  }
 .botao_gravar{
@@ -914,6 +945,24 @@ a:hover {
     display:none;
  }
 
+
+ /* -------Perfil usuario */
+ .input-relative {
+    position: relative;
+  }
+  
+
+  
+  .bnt_absolute {
+    position: absolute;
+    /* top: 50%; */
+    /* left:0px; */
+    right: 450px; /* Ajuste a distância do botão em relação à direita */
+    transform: translateY(-15%);
+    cursor: pointer;
+    
+   
+  }
  /*---------- GERENCIAR CATEGORIAS ---------*/
 
   .box_titulo {

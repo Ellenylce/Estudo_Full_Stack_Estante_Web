@@ -34,7 +34,7 @@
             </form>
         </div>
     </header>
-
+<!------Barra de navegação -->
     <section class = "botton-header">
         <nav> 
             <ul>
@@ -45,7 +45,7 @@
                         <a href="views/favoritos.php" class = "text"><img src="imgs/star.png" alt="" width="20px" height ="20px" style="margin-left: 10px;" class = "imagem_alinhar">Favoritos
                     </a>
                 </li>
-                <li class = "drop-hover alinhar_imagem"><a href="#" class = "text" >Olá, usuário <i class="bi bi-caret-down-fill imagem_drop"></i></a>
+                <li class = "drop-hover alinhar_imagem"><a href="#" class = "text" ><?= $_SESSION['nome_doador'] ?> <i class="bi bi-caret-down-fill imagem_drop"></i></a>
                     <div class = "drop">
                         <a href="views/login.php">Login</a>
                         <a href="views/cadastro.php">Cadastro</a>
@@ -65,16 +65,35 @@
     //  -- Inicio carrossel --
     require_once 'carrossel_livros.php';
     // -- fim carrossel --
+    ?>
+
+    <!-- Filtrar Genero de livros -->
+    
+   
+    <div class="filtrar-genero">
+        <ul>
+            <li><button class="botao-genero" >Educativo</button></li>
+            <li><button class="botao-genero" >Religioso</button></li>
+            <li><button class="botao-genero" onclick="buscarRomance()">Romance</button></li>
+            <li><button class="botao-genero" >Ficção</button></li>
+            <li><button class="botao-genero" >Aventura</button></li>
+            <li><button class="botao-genero" >Infantis</button></li>
+            </ul>
+            <div id="resultados"></div>
+           
+           
+    </div>
+
+ 
+    <?php
     // Consumo de API de livros
     require_once 'consumo_api.php';
     // Fim do codigo API
     ?>  
     </section>
     <!-- FIM do codigo -->
-
+ 
        
-
-    
 
     </main> 
     

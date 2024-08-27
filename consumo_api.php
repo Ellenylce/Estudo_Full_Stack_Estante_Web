@@ -1,4 +1,6 @@
 <?php
+
+
     if (isset($_GET['titulo'])) {
         $titulo = $_GET['titulo'];
         $url = "https://openlibrary.org/search.json?title=" . urlencode($titulo);
