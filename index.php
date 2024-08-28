@@ -94,9 +94,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/auth/auth.php
     // -- fim carrossel --
     ?>
 
-    <!-- Filtrar Genero de livros -->
-    
-   
+    <!-- Filtrar Livros -->
     <div class="filtrar-genero">
         <ul>
             <li><button class="botao-genero" >Educativo</button></li>
@@ -106,11 +104,32 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/auth/auth.php
             <li><button class="botao-genero" >Aventura</button></li>
             <li><button class="botao-genero" >Infantis</button></li>
             </ul>
-            <div id="resultados"></div>
-           
-           
+            <div id="resultados"></div>   
+    </div>
+    <!-- Fim -->
+
+    <!-- card com os livros  -->
+    <?php
+     require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/controllers/exibir_livros_controller.php';
+     require_once $_SERVER['DOCUMENT_ROOT'].'/ellen_karla/Estante-Web/models/livros.php';
+    ?>
+   <!-- O PHP recupera os dados binários da capa do livro do banco de dados e armazena-os na variável $livro->capa.
+Os dados binários são codificados em base64.
+A string codificada em base64 é inserida no atributo src da tag <img>, junto com o tipo MIME da imagem, criando uma URL de dados que o navegador pode interpretar e exibir a imagem -->
+    
+    <div class="livros">
+        <?php foreach ($livros as $livro): ?>
+            <div class="livro">
+                <img src="data:image/jpeg;base64,<?php echo base64_encode($livro->capa); ?>" alt="Capa do livro">
+                <h2><?php echo $livro->titulo; ?></h2>
+                <p><?php echo $livro->autor; ?></p>
+                <a href="#">Ver detalhes</a>
+            </div>
+        <?php endforeach; ?>
     </div>
 
+    
+ <!-- Finaliza card -->
  
     <?php
     // Consumo de API de livros
