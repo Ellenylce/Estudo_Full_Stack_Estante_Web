@@ -13,7 +13,7 @@ if(!empty($_FILES['foto_user']['tmp_name'])){
 };
 
 // adicionei
-var_dump($_POST);
+// var_dump($_POST);
 
 $usuario = new Usuarios();
 $usuario->nome_user = $nome_user;
