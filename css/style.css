@@ -365,16 +365,16 @@ footer{
 } 
 /* Fim código Carrossel
 
-/* --------- CODIGO ACERVO DE LIVROS --------- */
+/* --------- não apagar - CODIGO ACERVO DE LIVROS --------- */
 
 /* Utilizando API OPEN LIBRARY */
 /* Estilos CSS */
-.container-livros {
-    /* background-color: aqua; */
+/* .container-livros {
+    /* background-color: aqua; *
     
     margin: 0 auto;
     width:100%;
-    /* height: 100vh; */
+    /* height: 100vh; *
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
@@ -403,7 +403,7 @@ footer{
     transform: translate(-50%, -50%);
     max-width: 100%;
     max-height: 100%;
-    /* object-fit: contain; */
+    /* object-fit: contain; *
 }
 .sem-capa {
     position: absolute;
@@ -423,11 +423,39 @@ footer{
 }
 
  .quebra_linha{
-    white-space: nowrap; /* Impede a quebra de linha no texto */
-    overflow:hidden; /* Oculta o texto que ultrapassa o limite do contêiner*/
-    text-overflow: ellipsis; /* Adiciona reticências (...) para indicar texto cortado */
-}
+    white-space: nowrap; /* Impede a quebra de linha no texto *
+    overflow:hidden; /* Oculta o texto que ultrapassa o limite do contêiner*
+    text-overflow: ellipsis; /* Adiciona reticências (...) para indicar texto cortado *
+} */
 /* Fim código acervo livros */
+
+/* ------  Exibição de livros no INDEX ------- */
+.livros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px; /* Espaço entre os itens */
+    background-color: rgba(146, 132, 105, 0.479);
+  }
+  
+  .livro {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(146, 132, 105, 0.479);
+  }
+
+  .img_livro{
+   height: 250px;
+   width: 250;
+  }
+
+  .ver-detalhes_livro{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(71, 2, 2);
+    color: var (--branco);
+  }
+
 
 
 /* ---------- QUEM SOMOS ---------- */
