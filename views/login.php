@@ -33,6 +33,9 @@
             <div class="cadastro-link">
                 <p >Você ainda não se cadastrou? </p>
                 <a href="cadastro.php">Crie sua conta aqui</a>
+                <!-- Entrar como ADM -->
+                <br>
+                <a href="login_acesso_adm.php">Entrar como adm</a>
             </div>
         </div>
     </main> 

@@ -84,6 +84,19 @@ class Auth
         //     return true;
         // } else {
         //     return false;
-        // }
+        // }  
     }
+
+
+    // Verifica se é ADM
+    function isAdministrador() {
+        // Verificar se o usuário está logado e se as credenciais são de administrador
+        if (isset($_SESSION['email_user']) && $_SESSION['email_user'] === 'adm@gmail.com' && $_SESSION['senha_user'] === 'adm') {
+            return true;
+        }
+        return false;
+    }
+     
+    // Verificar se o usuário é administrador
+    // $isAdmin = isAdministrador();
 }  

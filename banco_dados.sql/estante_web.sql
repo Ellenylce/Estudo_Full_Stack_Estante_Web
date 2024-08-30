@@ -15,11 +15,11 @@ CREATE TABLE usuarios (
 -- Tabela administradores
 CREATE TABLE administradores (
     id_adm INT PRIMARY KEY AUTO_INCREMENT,
-    nome_adm VARCHAR(100),
+    nome_adm VARCHAR(100) NOT NULL,
     email_adm VARCHAR(100) UNIQUE,
+    contato_adm VARCHAR(20) NOT NULL,
     senha_adm VARCHAR(255),
-    foto_adm BLOB,
-    contato_adm VARCHAR(20)
+    foto_adm BLOB
 );
 
 CREATE TABLE livros (
