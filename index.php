@@ -117,23 +117,30 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/auth/auth.php
 
     <!-- CARDs DE EXIBIÇÃO DE LIVROS  -->
     <?php
-     require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/controllers/exibir_livros_controller.php';
+    //  require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/controllers/exibir_livros_controller.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/controllers/livro_controller.php';
      require_once $_SERVER['DOCUMENT_ROOT'].'/ellen_karla/Estante-Web/models/livros.php';
+     $livros = livros::exibirLivros();
+
     ?>
    <!--  recupera os dados binários da capa do livro 
 Os dados binários são codificados em base64.
 A string codificada em base64 é inserida no atributo src da tag <img>, junto com o tipo MIME da imagem, criando uma URL de dados que o navegador pode interpretar e exibir a imagem -->
     <div class="livros">
-        <?php foreach ($livrosObjetos as $livro): ?>
+        <!-- Ao clicar no livro -->
+    
+        <?php foreach ($livros as $livro): ?>
+
             <div class="livro">
                 <img class = img_livro src="data:image/jpeg;base64,<?php echo base64_encode($livro->capa); ?>" alt="Capa do livro">
                 <h2><?php echo $livro->titulo; ?></h2>
                 <p><?php echo $livro->autor; ?></p>
-
+            
                 <!-- botão favoritar -->
                 
                 <button class = "ver-detalhes_livro">Ver detalhes</button>
             </div>
+            <!-- </a> -->
         <?php endforeach; ?>
     </div>
  <!-- Finaliza card -->

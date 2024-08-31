@@ -23,7 +23,7 @@ CREATE TABLE administradores (
 );
 
 CREATE TABLE livros (
-  id INT PRIMARY KEY AUTO_INCREMENT,
+  id_livro INT PRIMARY KEY AUTO_INCREMENT,
   titulo VARCHAR(255),
   paginas INT,
   autor VARCHAR(255),
