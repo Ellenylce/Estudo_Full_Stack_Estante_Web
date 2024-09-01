@@ -1,13 +1,13 @@
 <!-- Está em teste -->
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/models/livro.php';
-// session_start();
+require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/models/livros.php';
+
 
 
 $titulo = $_POST['titulo'];
 $autor = $_POST['autor'];
 $sinopse = $_POST['sinopse'];
-$genero = $_POST['genero'];
+$categoria = $_POST['categoria'];
 $paginas = $_POST['paginas'];
 
 if(!empty($_FILES['capa']['tmp_name'])){
@@ -18,18 +18,15 @@ $livro = new livros();
 $livro->titulo = $titulo;
 $livro->autor = $autor;
 $livro->sinopse = $sinopse;
-$livro->genero = $genero;
-$livro->paginas = $paginas;
+$paginas->paginas = $paginas;
 if(isset($capa)){
     $livro->capa= $capa;
 } else {
-
-    // corrigir isso depois
-    $livro->capa = file_get_contents($_SERVER['DOCUMENT_ROOT'] . 'ellen_karla/Estante-Web/models/livro.php');
+    $livro->capa = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/imgs/livro.jpg');
 }
 
 
 $livro->cadastrarLivros();
 $livro->selecionarLivro($id_livro);
-$livro->exibirLivros();
+$livro->mostrarLivros();
 exit();

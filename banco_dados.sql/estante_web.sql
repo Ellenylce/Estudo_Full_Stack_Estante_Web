@@ -24,12 +24,12 @@ CREATE TABLE administradores (
 
 CREATE TABLE livros (
   id_livro INT PRIMARY KEY AUTO_INCREMENT,
-  titulo VARCHAR(255),
-  paginas INT,
-  autor VARCHAR(255),
-  sinopse TEXT,
-  genero VARCHAR(50),
-  capa LONGBLOB,
+  titulo VARCHAR(255) NOT NULL,
+  paginas INT NOT NULL,
+  autor VARCHAR(255) NOT NULL,
+  sinopse TEXT NOT NULL,
+  genero VARCHAR(50) NOT NULL,
+  capa LONGBLOB NOT NULL,
   id_usuario INT,
   FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
 );

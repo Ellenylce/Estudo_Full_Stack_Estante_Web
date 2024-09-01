@@ -1,46 +1,53 @@
 <?php
-
 require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/configs/conexao.php';
 
-
-// teste
-class Livros {
-    public $id;
+class livros {
+    public $id_livro;
     public $titulo;
     public $autor;
-    public $paginas;
     public $sinopse;
-    public $genero;
+    public $categoria;
     public $capa;
-    public $id_usuario;
 
-
-//   Exibir livros no index
-    public function exibirLivros() {
-        try {
-            $conn = Conexao::conectar();
-            $sql = 'SELECT * FROM livros';         
-            $stmt = $conn->prepare($sql);
-            $stmt->execute();
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            
-        
-            return $result;
-
-            
-                } catch (PDOException $erro) {
-                        echo $erro->getMessage();
-                    }
-        } 
-
-// selecionarLivro
-static function selecionarLivro($id)
+    public function cadastrarLivros()
     {
         try {
             $conn = Conexao::conectar();
-            $sql = 'SELECT * FROM livros WHERE id = :id';
+            $sql = 'INSERT INTO livros (titulo, autor, sinopse, categoria, capa) VALUES (:titulo, :autor, :sinopse, :categoria, :capa)';
             $stmt = $conn->prepare($sql);
-            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+            $stmt->bindValue(':titulo', $this->titulo);
+            $stmt->bindValue(':autor', $this->autor);
+            $stmt->bindValue(':sinopse', $this->sinopse);
+            $stmt->bindValue(':categoria', $this->categoria);
+            $stmt->bindValue(':capa', $this->capa);
+
+            $stmt->execute();
+        } catch (PDOException $erro) {
+            echo $erro->getMessage();
+        }
+    }
+
+    static function mostrarLivros()
+    {
+        try {
+            $conn = Conexao::conectar();
+            $sql = 'SELECT * FROM livros';
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $erro) {
+            echo $erro->getMessage();
+        }
+    }
+
+    static function selecionarLivro($id_livro)
+    {
+        try {
+            $conn = Conexao::conectar();
+            $sql = 'SELECT * FROM livros WHERE id_livro = :id';
+            $stmt = $conn->prepare($sql);
+            $stmt->bindValue(':id', $id_livro, PDO::PARAM_INT);
 
             $stmt->execute();
 
@@ -50,6 +57,6 @@ static function selecionarLivro($id)
         }
     }
 }
-
+?>
 
 
