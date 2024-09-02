@@ -51,7 +51,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/auth/auth.php
                 <li><a href="/ellen_karla/Estante-Web/views/contato.php">Contato</a></li>
 
                 <!-- Se estiver logado  -->
-                <?php if(Auth:: estarLogado()) : ?>
+                <?php if((Auth:: estarLogado())): ?>
                 
                 <!-- Verifica se é Usuário comum -->
                 <li class = "alinhar_imagem">
@@ -65,6 +65,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/auth/auth.php
                         <a href="/ellen_karla/Estante-Web/controllers/logout_controller.php">Encerrar Sessão</a>
                     </div>
                 <li>
+                    
                 <?php else : ?>
                     <!-- se não estiver logado -->
                 <li class = "drop-hover alinhar_imagem"><a href="#" class = "text" > Olá, usuário <i class="bi bi-caret-down-fill imagem_drop"></i></a>
@@ -78,9 +79,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/auth/auth.php
                 <!-- Finaliza a verificação de usuário comum -->   
 
                 <!-- verifica se é ADM  está dando erro-->
+                <!-- adicionei para apagar -->
+               
+                
+                
                     
-                
-                
+                    <!-- para apagar -->
+
+
                 <!-- Finaliza se é adm -->
 
             </ul>

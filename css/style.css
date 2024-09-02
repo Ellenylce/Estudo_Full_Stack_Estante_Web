@@ -1087,16 +1087,13 @@ a:hover {
     border-radius: 10px; 
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    
-      
+    align-items: center;     
 } 
 
 .alinhar_esquerda {
     display: flex;
     align-items: center; 
 }
-
 
 .botao_adicionar{
     background-color: var(--secundaria); 
@@ -1105,22 +1102,42 @@ a:hover {
     padding: 10px 20px; 
     border-radius: 5px;
     cursor: pointer;
+   
 }
+
+.botao_adicionar a{
+    color: var(--preto);
+    text-decoration: none;
+}
+
 
 .botao_adicionar:hover{
     filter: brightness(0.9);
+    
+    
 }
 
- .box_gerenciar_categorias{
+.box_gerenciar_categorias{
     background-color:var(--secundaria);
     border-radius:10px;
-    height: 400px;
+    /* height: 600px; */
     width: 400px;
-} 
+}
+
+ .categoria{
+    width: 800px;
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 15px;
+    
+ }
+
 
  .alinhar_categorias_adicionadas{
     display:flex;
     justify-content:center;
+   
 } 
 
 .categorias_adicionadas{
@@ -1131,7 +1148,8 @@ a:hover {
     height: auto;
     width: 80%;
     display:flex;
-    justify-content:flex-end;
+    justify-content:flex-end;  
+  
 } 
 
 .categorias_adicionadas img:hover{
@@ -1146,7 +1164,12 @@ a:hover {
     padding:10px;
 
 }
-
+/* -- Adicionar categorias -- */
+.centralizar_add_categoria{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 /* --------MEDIA QUERY -------- */

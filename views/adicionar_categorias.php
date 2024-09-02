@@ -47,15 +47,19 @@
                 
                 <h2 style="margin-left: 50px;">Adicionar Categorias</h2> <!--Centralizo o texto ao centro-->
                 
-                <a style="margin-left: 5px;"retroceder_pagina.html">
+                <a href = "gerenciar_categorias.php" style="margin-left: 5px;"retroceder_pagina.php">
                     <img class="icone_retroceder" src="../imgs/icone_retroceder.svg" alt="" width="30px" heigth ="30px">
                 </a>
             </div>
 
            
                 <div class="alinhar_vertical">
-                    <input type="text" placeholder="Digite o nome da categoria" required style="width: 60%; margin-top: 20px;">
-                    <button style="width: 50%; margin-bottom: 20px; padding:10px;background-color: var(--primaria);border:none; margin-top:5px">ADICIONAR</button>
+                    <form class = "centralizar_add_categoria" action = "/ellen_karla/Estante-Web/controllers/categoria_controller.php" method = "post">
+                        <div>
+                            <input type="text" placeholder="Digite o nome da categoria" required style="width: 60%; margin-top: 20px;" name = "nome_categoria">
+                            <button type = "submit"style="width: 50%; margin-bottom: 20px; padding:10px;background-color: var(--primaria);border:none; margin-top:5px">ADICIONAR</button>
+                        </div>
+                    </form>
                 </div> 
             
         </div>

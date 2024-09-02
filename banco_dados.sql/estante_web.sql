@@ -58,11 +58,11 @@ VALUES
 -- -- Tabela categorias
 -- CREATE TABLE categorias (
 --     id_categoria INT PRIMARY KEY AUTO_INCREMENT,
---     nome VARCHAR(100)
+--     nome_categoria VARCHAR(100)
 -- );
 
 -- -- inserir as categorias de livros
--- INSERT INTO categorias (nome) VALUES
+-- INSERT INTO categorias (nome_categoria) VALUES
 -- ('Educativo'), ('Religioso'), ('Infantil'), ('Aventura'), ('Ficção Científica'), ('Romance');
 
 -- -- Tabela de livros

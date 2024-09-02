@@ -1,3 +1,13 @@
+
+
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/models/categoria.php';
+
+
+    $id = $_GET['id'];
+    $categoria = new Categoria ($id);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -52,11 +62,17 @@
                 </a>
             </div>
 
-           
-                <div class="alinhar_vertical">
-                    <input type="text" placeholder="Digite o nome da categoria" required style="width: 70%; margin-top: 20px;">
-                    <button style="width: 50%; margin-bottom: 20px;padding:10px;background-color: var(--primaria);border:none">SALVAR</button>
-                </div> 
+                <form action="/ellen_karla/Estante-Web/controllers/categoria_edit_controller.php" method="post">
+                        <!-- inpu escondido com ID -->
+                    <input type="hidden" name="id" value="<?= $categoria->id_categoria?>">
+                    <div class="alinhar_vertical">
+                    
+                        <!-- Input editar -->
+                        <input type="text" placeholder="Digite o nome da categoria" required style="width: 70%; margin-top: 20px;" id = "nome" name = "nome" value = "<?=$categoria->nome_categoria;?>">
+                        <button style="width: 50%; margin-bottom: 20px;padding:10px;background-color: var(--primaria);border:none">ATUALIZAR</button>
+                    </div>
+                    </form>
+                 
             
         </div>
            
