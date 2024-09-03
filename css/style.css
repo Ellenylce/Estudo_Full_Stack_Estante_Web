@@ -592,6 +592,17 @@ footer{
 }
 
 /*---------- FAVORITAR -----------*/
+
+.livros_favoritos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Para distribuir os itens uniformemente */
+}
+
+.livro_favorito{
+    flex: 1 0 20%; /* Cada item ocupará 32% da largura, com espaço para crescer e encolher */
+    margin-bottom: 20px; /* Espaçamento entre as linhas */
+}
 .alinhar_barra_Lateral{
     display: flex;
     margin-top: 30px;

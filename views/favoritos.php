@@ -1,5 +1,12 @@
 <?php
 require_once 'cabecalho.php';
+// Adicionei testando favoritar abaixo:
+require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/models/favoritos.php';
+// require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/models/categoria.php';
+
+// $categorias = Categoria::listarCategoria();
+
+$listagem_favorito = Favorito::listarLivroFavorito($_SESSION['id_usuario']);
 ?>
 
     <main>
@@ -25,7 +32,26 @@ require_once 'cabecalho.php';
         <!-- <div > contem o box books -->
             <section class="box_books">
                 <div class="centralizar_icone_mais">
-                    <p class="text_biblioteca_vazia">Sua biblioteca está vazia
+
+                    <!-- Adicionar código favoritar -->
+
+                    <div class ="livros_favoritos">
+                        <?php foreach ($listagem_favorito as $favorito) : ?>
+                        <div class="livro_favorito">
+                            <img class = "img_livro" src="data:image; base64, <?= base64_encode($favorito['capa']) ?>" alt="" />
+                            <h1><?= $favorito['titulo'] ?></h1>
+                            <span class="coracao-icon"><img src="../imgs/bookmark-icon.svg" alt="" /></span>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                   
+                           
+
+                    <!-- Finalizar código favoritar -->
+
+
+
+                    <!-- <p class="text_biblioteca_vazia">Sua biblioteca está vazia -->
                         <!-- <a href="#Adicionar_livros" ><img src="../imgs/icone_mais.svg" alt="Adicionar Livros" width="50" height="50"></a>Sua biblioteca está vazia</a> -->
                     </p>
                 </div>

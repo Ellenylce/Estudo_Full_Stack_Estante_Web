@@ -25,13 +25,13 @@ public function carregarLivro(){
     $stmt->execute();
     $resultado = $stmt->fetch();
 
+
     $this->titulo = $resultado['titulo'];
     $this->autor = $resultado['autor'];
     $this->sinopse = $resultado['sinopse'];
     $this->capa = $resultado['capa'];
     $this->genero = $resultado['genero'];
 }
-
 
 
 

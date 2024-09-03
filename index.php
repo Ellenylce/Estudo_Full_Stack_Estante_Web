@@ -61,7 +61,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/auth/auth.php
                 <li class = "drop-hover alinhar_imagem"><a href="#" class = "text" > Olá, <?= $_SESSION['nome_user'] ?> <i class="bi bi-caret-down-fill imagem_drop"></i></a>
                 <!-- dropdown -->
                     <div class = "drop">
-                        <a href="/ellen_karla/Estante-Web/views/perfil_user.php">Meu Perfil</a>
+
+                    <!-- Adicionei para editar perfil -->
+                    <a href="/ellen_karla/Estante-Web/views/perfil_user.php">Meu Perfil</a>
+
+                    <!-- por no ahref acima ?id=<interrogção=$usuario['id_usuario']?> -->
+                    <!--  -->
+                        <!-- <a href="/ellen_karla/Estante-Web/views/perfil_user.php">Meu Perfil</a> -->
                         <a href="/ellen_karla/Estante-Web/controllers/logout_controller.php">Encerrar Sessão</a>
                     </div>
                 <li>
@@ -143,7 +149,14 @@ A string codificada em base64 é inserida no atributo src da tag <img>, junto co
                 <p><?= htmlspecialchars($livro['autor']); ?></p>
            
                 <!-- botão favoritar -->
-                <button class="material-symbols-outlined">favorite</button>
+                <!-- <button class="material-symbols-outlined">favorite</button> -->
+                <span >
+                    <form action="/ellen_karla/Estante-Web/controllers/fav_livro_controller.php" method="post">
+                        <input type="hidden" name="id_livro" value="<?= $livro['id_livro'] ?>">
+                        <input type="hidden" name="id_usuario" value="<?= $_SESSION['id_usuario'] ?>">
+                        <button type="submit" class="material-symbols-outlined">favorite</button>
+                    </form>
+                 </span>
             </div>
             <!-- </a> -->
         <?php endforeach; ?>

@@ -91,3 +91,11 @@ VALUES
 --     FOREIGN KEY (usuario_id) REFERENCES usuarios(id_usuario),
 --     FOREIGN KEY (livro_id) REFERENCES livros(id_livro)
 -- );
+
+CREATE TABLE favoritos (
+    id_livro_favorito INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT,
+    id_livro  INT,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario) ON DELETE CASCADE,
+    FOREIGN KEY (id_livro) REFERENCES livros (id_livro) ON DELETE CASCADE
+);
