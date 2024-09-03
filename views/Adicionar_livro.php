@@ -1,3 +1,10 @@
+<?php
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/models/categoria.php';
+
+    $categorias = Categoria::listarCategoria();
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -70,8 +77,10 @@
                 <div class="input">
                     <input type="text" placeholder="Digite o título" required style="width: 95%; margin-bottom: 10px;" name = "titulo">
                     <input type="text" placeholder="Digite o autor" required style="width: 95%; margin-bottom: 10px;" name = "autor">
+
                     <!-- Uma caixa para selecionar as categorias -->
-                    <select required style="width: 95%" name="genero">
+
+                    <!-- <select required style="width: 95%" name="genero">
                         <option value="" disabled selected>Categoria</option>
                         <option value="Romance">Romance</option>
                         <option value="Terror">Terror</option>
@@ -79,7 +88,17 @@
                         <option value="Infantil">Infantil</option>
                         <option value="Aventura">Aventura</option>
                         <option value="Educação">Livros Educativos</option>
+                    </select> -->
+
+                    <!-- funcionou selecionr categoria -->
+                    <select required style="width: 95%" name="genero">
+                        <option value="" disabled selected>Categoria</option>
+                        <?php foreach ($categorias as $categoria): ?>
+                            <option value="<?= $categoria['id_categoria'] ?>"><?= $categoria['nome_categoria'] ?>
+                            </option>
+                        <?php endforeach; ?>
                     </select>
+
                 </div>
             </div>
 

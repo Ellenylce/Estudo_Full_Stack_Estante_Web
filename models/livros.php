@@ -9,6 +9,33 @@ class Livros {
     public $genero;
     public $capa;
 
+// Construct
+public function __construct($id = false){
+    if($id){
+        $this->id_livro = $id;
+        $this->carregarLivro();
+    }
+}
+
+public function carregarLivro(){
+    $conn = Conexao::conectar();
+    $sql = "SELECT * FROM livros WHERE id_livro = :id";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindValue(':id', $this->id_livro);
+    $stmt->execute();
+    $resultado = $stmt->fetch();
+
+    $this->titulo = $resultado['titulo'];
+    $this->autor = $resultado['autor'];
+    $this->sinopse = $resultado['sinopse'];
+    $this->capa = $resultado['capa'];
+    $this->genero = $resultado['genero'];
+}
+
+
+
+
+
     // Adicionar livros 
     public function adicionarLivros()
     {
@@ -59,42 +86,68 @@ class Livros {
         }
     }
 
+    // Atualizar livro
+public function atualizarLivro()
+{
+    try {
+        $conn = Conexao::conectar();
+        $sql = "UPDATE livros SET titulo = :titulo, autor = :autor, sinopse = :sinopse, capa = :capa, genero = :genero WHERE id_livro = :id";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindValue(':id', $this->id_livro);
+        $stmt->bindValue(':titulo', $this->titulo);
+        $stmt->bindValue(':autor', $this->autor);
+        $stmt->bindValue(':sinopse', $this->sinopse);
+        $stmt->bindValue(':capa', $this->capa);
+        $stmt->bindValue(':genero', $this->genero);
+        
+        $stmt->execute();
+       
+
+        // return $stmt->fetch(PDO::FETCH_ASSOC);
+    } catch (PDOException $erro) {
+        echo $erro->getMessage();
+    }
+}
+
+
+
+
 // Deletar livro
-    static function deletarLivro($id_livro)
+        public function deletarLivro()
     {
         try {
             $conn = Conexao::conectar();
             $sql = 'DELETE FROM livros WHERE id_livro = :id';
             $stmt = $conn->prepare($sql);
-            $stmt->bindValue(':id', $id_livro);
-
+            $stmt->bindValue(':id', $this->id_livro, PDO::PARAM_INT);
             $stmt->execute();
+
     }   catch (PDOException $erro) {
         echo $erro->getMessage();
     }
 }
-    public function editarLivro() {
-        try {
-            $conn = Conexao::conectar();
-            $sql = 'UPDATE livros SET titulo = :titulo, autor = :autor, sinopse = :sinopse, genero = :genero, capa = :capa WHERE id_livro = :id';
-            $stmt = $conn->prepare($sql);
+//     public function editarLivro() {
+//         try {
+//             $conn = Conexao::conectar();
+//             $sql = 'UPDATE livros SET titulo = :titulo, autor = :autor, sinopse = :sinopse, genero = :genero, capa = :capa WHERE id_livro = :id';
+//             $stmt = $conn->prepare($sql);
 
-            $stmt->bindValue(':id', $this->id_livro);
-            $stmt->bindValue(':titulo', $this->titulo);
-            $stmt->bindValue(':autor', $this->autor);
-            $stmt->bindValue(':sinopse', $this->sinopse);
-            $stmt->bindValue(':categoria', $this->categoria);
-            $stmt->bindValue(':capa', $this->capa);
+//             $stmt->bindValue(':id', $this->id_livro);
+//             $stmt->bindValue(':titulo', $this->titulo);
+//             $stmt->bindValue(':autor', $this->autor);
+//             $stmt->bindValue(':sinopse', $this->sinopse);
+//             $stmt->bindValue(':categoria', $this->categoria);
+//             $stmt->bindValue(':capa', $this->capa);
         
 
-            $stmt->execute();
-            // return true; // Indica sucesso
+//             $stmt->execute();
+//             // return true; // Indica sucesso
 
-        } catch (PDOException $erro) {
-        echo $erro->getMessage();
-        // return false; // Indica falha
-    }
-}
+//         } catch (PDOException $erro) {
+//         echo $erro->getMessage();
+//         // return false; // Indica falha
+//     }
+// }
 
 
 }

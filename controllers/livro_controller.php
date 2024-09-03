@@ -30,4 +30,7 @@ if(isset($capa)){
 $livro->adicionarLivros();
 // $livro->selecionarLivro($id_livro);
 $livro->mostrarLivros();
+header('Location:/ellen_karla/Estante-Web/views/gerenciar_livros.php');
+
+
 exit();
