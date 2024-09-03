@@ -1,7 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/configs/conexao.php';
 
-class livros {
+class Livros {
     public $id_livro;
     public $titulo;
     public $autor;
@@ -9,7 +9,8 @@ class livros {
     public $genero;
     public $capa;
 
-    public function cadastrarLivros()
+    // Adicionar livros 
+    public function adicionarLivros()
     {
         try {
             $conn = Conexao::conectar();
@@ -27,6 +28,7 @@ class livros {
         }
     }
 
+    // Exibir Livros
     static function mostrarLivros()
     {
         try {

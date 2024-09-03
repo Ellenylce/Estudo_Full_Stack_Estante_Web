@@ -44,23 +44,25 @@
         <!-- O container que vai conter -->
         <div class ="box_gerenciar_livros">
             <div class="titulo_container">
+                <a href="configuracao.html">
+                    <img  src="../imgs/icone_config.svg" alt="" width="30px" heigth ="30px">
+                </a>
+                <h2>Gerenciar Livros</h2>
                 
-                <h2 style="margin-left: 50px;">Adicionar Categorias</h2> <!--Centralizo o texto ao centro-->
-                
-                <a href = "gerenciar_categorias.php" style="margin-left: 5px;"retroceder_pagina.php">
+                <a href="retroceder_pagina.php">
                     <img class="icone_retroceder" src="../imgs/icone_retroceder.svg" alt="" width="30px" heigth ="30px">
                 </a>
             </div>
 
-           
-                <div class="alinhar_vertical">
-                    <!-- Adionar Categoria -->
-                    <form class = "centralizar_add_categoria" action = "/ellen_karla/Estante-Web/controllers/categoria_controller.php" method = "post">
-                        <div>
-                            <input type="text" placeholder="Digite o nome da categoria" required style="width: 60%; margin-top: 20px;" name = "nome_categoria">
-                            <button type = "submit"style="width: 50%; margin-bottom: 20px; padding:10px;background-color: var(--primaria);border:none; margin-top:5px">ADICIONAR</button>
-                        </div>
-                    </form>
+            <!-- Body box:Gerenciar Livros -->
+            
+                <div class="buttoes_vertical">
+
+                    <!-- adicionar Livro -->
+                    <button class="botoes_gerenciar_livros" type="submit"> <a href="/ellen_karla/Estante-Web/views/adicionar_livro.php" class = "tira_decoration">Adicionar Livro</a></button>
+                  
+                    <!-- Editar Livro -->
+                    <button class="botoes_gerenciar_livros" type="reset"><a href="/ellen_karla/Estante-Web/views/editar_livro.php" class = "tira_decoration">Editar Livro</a></button>
                 </div> 
             
         </div>

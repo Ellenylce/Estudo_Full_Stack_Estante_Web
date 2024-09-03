@@ -22,6 +22,8 @@ $categorias = Categoria:: listarCategoria();
                     </div>
                 </div>
                 <!-- <button class="botao_adicionar">Adicionar</button>-->
+
+                <!-- Botão Adicionar Categoria -->
                 <button class="botao_adicionar"><a href ="adicionar_categorias.php" class = "tira_decoration">Adicionar</a></button>
             </div>
             <!-- body grenciar categorias -->

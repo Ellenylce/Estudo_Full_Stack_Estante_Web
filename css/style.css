@@ -954,6 +954,16 @@ a:hover {
     margin-top: 10px;  
 }
 
+/* teste */
+.tira_decoration{
+    text-decoration:none;  
+}
+
+.buttoes_vertical button a:hover{
+    color:#0e0000;
+}
+
+
 /* ---------PERFIL  ---------- */
 .box_perfil{
     background-color: var(--secundaria);
