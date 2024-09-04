@@ -369,8 +369,8 @@ footer{
 
 /* Utilizando API OPEN LIBRARY */
 /* Estilos CSS * */
- .container-livros {
-    /* background-color: aqua;  */
+ /* .container-livros {
+    /* background-color: aqua;  *
     margin: 0 auto;
     width:100%;
     height: 100vh; 
@@ -421,10 +421,10 @@ footer{
 }
 
  .quebra_linha{
-    white-space: nowrap; /*Impede a quebra de linha no texto*/
-    overflow:hidden; /* Oculta o texto que ultrapassa o limite do contêiner*/
-    text-overflow: ellipsis; /* Adiciona reticências (...) para indicar texto cortado */
-}
+    white-space: nowrap; /*Impede a quebra de linha no texto*
+    overflow:hidden; /* Oculta o texto que ultrapassa o limite do contêiner*
+    text-overflow: ellipsis; /* Adiciona reticências (...) para indicar texto cortado *
+} */
 /* Fim código acervo livros */
 
 

@@ -46,7 +46,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/models/livros
                     <!-- finaliza teste -->
             </div>
             <div class="input">
-                    <input type="text" placeholder="Digite o título" required style="width: 95%; margin-bottom: 10px;" name="nome" id = "nome" value = "<?=$livro->titulo;?>">
+                    <input type="text" placeholder="Digite o título" required style="width: 95%; margin-bottom: 10px;" name="titulo" id = "titulo" value = "<?=$livro->titulo;?>">
 
                     <input type="text" placeholder="Digite o autor" required style="width: 95%; margin-bottom: 10px;" name = "autor" value = "<?=$livro->autor;?>">
                     <!-- Uma caixa para selecionar as categorias -->

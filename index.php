@@ -151,7 +151,7 @@ A string codificada em base64 é inserida no atributo src da tag <img>, junto co
         <?php foreach ($livros as $livro): ?>
             <div class="livro">
                 <a href="/ellen_karla/Estante-Web/views/exp_livro.php?id=<?= htmlspecialchars($livro['id_livro']) ?>">
-                <img class = "img_livro" id="capa" src="data:image/jpeg;base64, <?= base64_encode($livro['capa']); ?>" alt="capa de livro">
+                <img class = "img_livro" id="capa" src="data:image/jpeg;base64,<?= base64_encode($livro['capa']); ?>" alt="capa de livro">
                 </a>
                 <h2><?= htmlspecialchars($livro['titulo']); ?></h2>
                 <p><?= htmlspecialchars($livro['autor']); ?></p>

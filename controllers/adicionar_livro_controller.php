@@ -3,11 +3,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/models/livros
 
 // Adicionar livro
 
-public $titulo;
-public $autor;
-public $sinopse;
-public $genero;
-public $capa;
+// public $titulo;
+// public $autor;
+// public $sinopse;
+// public $genero;
+// public $capa;
 
 $titulo = $_POST['titulo'];
 $autor = $_POST['autor'];
@@ -26,12 +26,13 @@ $livro->sinopse = $sinopse;
 $livro->genero = $genero;
 
 if(isset($capa)){
-    $livro->capa =  $capa;
+    $livro->capa =$capa;
 } else {
-    $livro->capa = file_get_contents($_SERVER['DOCUMENT_ROOT'] . 'ellen_karla/Estante-Web/models/livros.php');
+    $livro->capa = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/imgs/livro.jpg');
 }
 
-$livro->adicionarLivro();
-header('Location:/ellen_karla/Estante-Web/views/gerenciar_livros.php');
+var_dump($capa);
 
-exit();
+$livro->adicionarLivros();
+// header('Location:/ellen_karla/Estante-Web/views/gerenciar_livros.php');
+// exit();

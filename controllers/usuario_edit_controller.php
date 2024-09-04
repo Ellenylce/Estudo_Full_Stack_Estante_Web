@@ -10,7 +10,7 @@ if (!empty($_FILES['foto_user']['tmp_name'])) {
     $capa = file_get_contents($_FILES['foto_user']['tmp_name']);
 };
 
-$usuario = new Usuario ($id);
+$usuario = new Usuarios ($id);
 $usuario ->nome_user = $nome_user;
 $usuario ->email_user = $email_user;
 

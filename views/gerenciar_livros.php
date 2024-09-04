@@ -24,7 +24,7 @@ $livros = Livros:: mostrarLivros();
                 <!-- <button class="botao_adicionar">Adicionar</button>-->
 
                 <!-- Botão Adicionar Livro -->
-                <button class="botao_adicionar"><a href ="adicionar_livro.php" class = "tira_decoration">Adicionar</a></button>
+                <button class="botao_adicionar"><a href ="/ellen_karla/Estante-Web/views/adicionar_livro.php" class = "tira_decoration">Adicionar</a></button>
             </div>
             <!-- body grenciar livros -->
             <div class="alinhar_vertical">
