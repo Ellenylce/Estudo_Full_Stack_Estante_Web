@@ -142,30 +142,49 @@ A string codificada em base64 é inserida no atributo src da tag <img>, junto co
         <!-- Ao clicar no livro -->
         <?php foreach ($livros as $livro): ?>
             <div class="livro">
-            <a href="/ellen_karla/Estante-Web/views/exp_livro.php?id=<?= htmlspecialchars($livro['id_livro']) ?>">
+                <a href="/ellen_karla/Estante-Web/views/exp_livro.php?id=<?= htmlspecialchars($livro['id_livro']) ?>">
                 <img class = "img_livro" id="capa" src="data:image/jpeg;base64, <?= base64_encode($livro['capa']); ?>" alt="capa de livro">
                 </a>
                 <h2><?= htmlspecialchars($livro['titulo']); ?></h2>
                 <p><?= htmlspecialchars($livro['autor']); ?></p>
            
-                <!-- botão favoritar -->
-                <!-- <button class="material-symbols-outlined">favorite</button> -->
-                <span >
-                    <form action="/ellen_karla/Estante-Web/controllers/fav_livro_controller.php" method="post">
-                        <input type="hidden" name="id_livro" value="<?= $livro['id_livro'] ?>">
-                        <input type="hidden" name="id_usuario" value="<?= $_SESSION['id_usuario'] ?>">
-                        <!-- <button type="submit" class="material-symbols-outlined">favorite</button> -->
-                        <button type = "submit">
-                            <img src="imgs/coracao_icon_preto.svg" alt="favoritar" style="width: 30px; height: 30px;" />
-                        </button>
-                    </form>
-                 </span>
-            </div>
-            <!-- </a> -->
-        <?php endforeach; ?>
+                <!-- Teste -->
+               
 
 
-    </div>
+<!-- // Verifica se o usuário está logado -->
+                
+    <!-- // Usuário está logado, exibe o formulário -->
+                <?php if(Auth:: estarLogado()): ?>
+            <span>
+                <form action="/ellen_karla/Estante-Web/controllers/fav_livro_controller.php" method="post">
+                    <input type="hidden" name="id_livro" value="<?= $livro['id_livro']?>">
+                    <input type="hidden" name="id_usuario" value="<?= $_SESSION['id_usuario']?>">
+                    <button type="submit">
+                        <img src="imgs/coracao_icon_preto.svg" alt="favoritar" style="width: 30px; height: 30px;"/>
+                    </button>
+                </form>
+            </span>
+
+            <?php else : ?>  
+    <!-- // Usuário não está logado, cria um link que redireciona para a página de login -->
+            <a href="/ellen_karla/Estante-Web/views/login.php">
+            <button type="button">
+                <img src="imgs/coracao_icon_preto.svg" alt="favoritar" style="width: 30px; height: 30px;"/>
+            </button>
+            </a>
+            <?php endif;?> 
+
+        </div>
+<!-- </a> -->
+    <?php endforeach; ?>
+</div>
+
+
+
+ 
+
+                
  <!-- Finaliza card -->
  
 
