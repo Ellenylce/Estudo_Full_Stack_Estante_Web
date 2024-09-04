@@ -5,7 +5,7 @@ $categorias = Categoria:: listarCategoria();
 
 ?>
 
-<?php require_once 'cabecalho.php';?>
+<?php require_once 'cabecalho_adm.php';?>
     
     <main class="centralizar_main"> <!--principal-->
 

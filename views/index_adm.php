@@ -1,0 +1,1 @@
+<?php require_once 'cabecalho_adm.php';?>

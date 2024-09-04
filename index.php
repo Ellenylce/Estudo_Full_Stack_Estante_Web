@@ -50,7 +50,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/auth/auth.php
                 <li><a href="/ellen_karla/Estante-Web/views/quem_somos.php">Quem Somos</a></li>
                 <li><a href="/ellen_karla/Estante-Web/views/contato.php">Contato</a></li>
 
-                <!-- Se estiver logado  -->
+                <!-- Se estiver usuario estiver logado  -->
                 <?php if((Auth:: estarLogado())): ?>
                 
                 <!-- Verifica se é Usuário comum -->
@@ -82,15 +82,23 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/auth/auth.php
                     </div>
                 <li>
                 <?php endif;?> 
-                <!-- Finaliza a verificação de usuário comum -->   
+                <!-- Finaliza a verificação de usuário comum --> 
+                
+                
 
-                <!-- verifica se é ADM  está dando erro-->
+
+                <!-- verifica se é ADM  está Logado-->
+
+
+
+
+
                 <!-- adicionei para apagar -->
                
                 
                 
                     
-                    <!-- para apagar -->
+                
 
 
                 <!-- Finaliza se é adm -->
@@ -127,8 +135,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/auth/auth.php
 
 
 
-
     <!-- CARDs DE EXIBIÇÃO DE LIVROS  -->
+
     <?php
     //  require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/controllers/exibir_livros_controller.php';
     // require_once $_SERVER['DOCUMENT_ROOT'] . '/ellen_karla/Estante-Web/controllers/livro_controller.php';
@@ -148,11 +156,11 @@ A string codificada em base64 é inserida no atributo src da tag <img>, junto co
                 <h2><?= htmlspecialchars($livro['titulo']); ?></h2>
                 <p><?= htmlspecialchars($livro['autor']); ?></p>
            
-                <!-- Teste -->
+             
                
 
 
-<!-- // Verifica se o usuário está logado -->
+<!-- // Verifica se o usuário está logado para adicionar livro nos favoritos -->
                 
     <!-- // Usuário está logado, exibe o formulário -->
                 <?php if(Auth:: estarLogado()): ?>
@@ -165,42 +173,31 @@ A string codificada em base64 é inserida no atributo src da tag <img>, junto co
                     </button>
                 </form>
             </span>
-
+<!-- // Usuário não está logado, cria um link que redireciona para a página de login -->
             <?php else : ?>  
-    <!-- // Usuário não está logado, cria um link que redireciona para a página de login -->
             <a href="/ellen_karla/Estante-Web/views/login.php">
             <button type="button">
                 <img src="imgs/coracao_icon_preto.svg" alt="favoritar" style="width: 30px; height: 30px;"/>
             </button>
             </a>
             <?php endif;?> 
-
         </div>
-<!-- </a> -->
     <?php endforeach; ?>
 </div>
-
+<!-- Finaliza card -->
 
 
  
 
-                
- <!-- Finaliza card -->
- 
 
-
-
+<!-- // Consumo de API de livros -->
     <?php
-    // Consumo de API de livros
     require_once 'consumo_api.php';
-    // Fim do codigo API
     ?>  
+<!-- // Fim do codigo API -->
     </section>
-    <!-- FIM do codigo -->
- 
-       
-
     </main> 
+<!-- FIM do codigo -->
     
 
 

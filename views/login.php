@@ -35,7 +35,7 @@
                 <a href="cadastro.php">Crie sua conta aqui</a>
                 <!-- Entrar como ADM -->
                 <br>
-                <a href="login_acesso_adm.php">Entrar como adm</a>
+                <a href="login_adm.php">Entrar como adm</a>
             </div>
         </div>
     </main> 
