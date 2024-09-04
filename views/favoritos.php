@@ -33,14 +33,29 @@ $listagem_favorito = Favorito::listarLivroFavorito($_SESSION['id_usuario']);
             <section class="box_books">
                 <div class="centralizar_icone_mais">
 
-                    <!-- Adicionar código favoritar -->
-
+                    <!-- Adicionei para excluir favorito 2 -->
+                    
+                    <!-- finaliza -->
                     <div class ="livros_favoritos">
                         <?php foreach ($listagem_favorito as $favorito) : ?>
-                        <div class="livro_favorito">
-                            <img class = "img_livro" src="data:image; base64, <?= base64_encode($favorito['capa']) ?>" alt="" />
-                            <h1><?= $favorito['titulo'] ?></h1>
-                            <span class="coracao-icon"><img src="../imgs/bookmark-icon.svg" alt="" /></span>
+                           
+                        <div class="livro">
+                                <img class = "img_livro" src="data:image; base64, <?= base64_encode($favorito['capa']) ?>" alt="" />
+                                <h4><?= $favorito['titulo'] ?></h4>
+                            
+                              
+                            <span >
+                                <form action = "/ellen_karla/Estante-Web/controllers/excluir_favorito.php" method="post" onsubmit = "return confirm ('Você tem certeza que quer deletar este livro de seus favoritos?')">
+                                <input type ="hidden" name="id" value = "<?= $favorito['id_livro_favorito']?>">
+
+                                <!--  Adicionei deletar favorito -->
+                                <button type = "submit">
+                               
+                                    <img class = "img_icone" src="../imgs/icon_coracao_vermelho.png" alt="favoritado" style="width: 30px; height: 30px;"/>
+                                </button>
+                                </form>
+                            </span>
+                            
                         </div>
                         <?php endforeach; ?>
                     </div>
@@ -61,3 +76,5 @@ $listagem_favorito = Favorito::listarLivroFavorito($_SESSION['id_usuario']);
     </main> 
 
     <?php require_once 'rodape.php';?>
+
+    

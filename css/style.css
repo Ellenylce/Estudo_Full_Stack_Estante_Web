@@ -594,12 +594,23 @@ footer{
 /*---------- FAVORITAR -----------*/
 
 .livros_favoritos{
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Para distribuir os itens uniformemente */
+    /* justify-content: space-between; */
+    width: 100%; 
 }
 
 .livro_favorito{
+    
+
     flex: 1 0 20%; /* Cada item ocupará 32% da largura, com espaço para crescer e encolher */
     margin-bottom: 20px; /* Espaçamento entre as linhas */
 }
@@ -608,6 +619,8 @@ footer{
     margin-top: 30px;
     padding:0;
 }
+
+
 /* .barra_menu_categoria{
    
     display:flex;

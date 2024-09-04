@@ -154,7 +154,10 @@ A string codificada em base64 é inserida no atributo src da tag <img>, junto co
                     <form action="/ellen_karla/Estante-Web/controllers/fav_livro_controller.php" method="post">
                         <input type="hidden" name="id_livro" value="<?= $livro['id_livro'] ?>">
                         <input type="hidden" name="id_usuario" value="<?= $_SESSION['id_usuario'] ?>">
-                        <button type="submit" class="material-symbols-outlined">favorite</button>
+                        <!-- <button type="submit" class="material-symbols-outlined">favorite</button> -->
+                        <button type = "submit">
+                            <img src="imgs/coracao_icon_preto.svg" alt="favoritar" style="width: 30px; height: 30px;" />
+                        </button>
                     </form>
                  </span>
             </div>

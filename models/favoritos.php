@@ -7,6 +7,16 @@ class Favorito
     public $id_usuario;
     public $id_livro;
 
+// adicionei
+public function __construct($id = false){
+    if($id){
+        $this->id_livro_favorito = $id;
+        
+    }
+}
+
+
+
     public function cadastrarLivroFavorito()
     {
         try {
@@ -41,21 +51,21 @@ class Favorito
         }
     }
 
-    public function deletarLivroFavorito($id_livro_favorito)
+    public function deletarLivroFavorito()
 {
     try {
         $conn = Conexao::conectar();
-        $sql = 'DELETE FROM favoritos WHERE id_livro_favorito = :id_livro_favorito';
+        $sql = 'DELETE FROM favoritos WHERE id_livro_favorito = :id';
 
         $stmt = $conn->prepare($sql);
-        $stmt->bindValue(':id_livro_favorito', $id_livro_favorito);
+        $stmt->bindValue(':id', $this-> id_livro_favorito);
 
         $stmt->execute();
 
-        return true; // Retorna true se a operação foi bem-sucedida
+        return true;
     } catch (PDOException $erro) {
         echo $erro->getMessage();
-        return false; // Retorna false em caso de erro
+        return false;
     }
 }
 }

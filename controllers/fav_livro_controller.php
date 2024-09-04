@@ -11,5 +11,8 @@ $livro_favorito->id_livro = $id_livro;
 
 $id_livro_favorito = $livro_favorito->cadastrarLivroFavorito();
 
-header('Location: /ellen_karla/Estante-Web/views/favoritos.php');
+header('Location: /ellen_karla/Estante-Web/index.php');
 exit();
+
+// fav_livro_controller.php
+
