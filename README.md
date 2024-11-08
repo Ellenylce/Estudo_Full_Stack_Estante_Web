@@ -22,11 +22,6 @@ Bem-vindo ao repositório da **Estante Web**, um projeto de estudo criado para p
 - **Cadastro e Login de Usuário**: Opção para novos usuários se registrarem e fazerem login na conta.
 - **Gerenciamento de Dados**: Armazena e gerencia dados de usuários e livros no banco de dados.
 
-## 📚 Aprendizados
-
-- **interface interativa e acordeões**: implementar uma interface interativa utilizando JavaScript para criar um sistema de FAQ com acordeões.
-- **HTML e CSS**: Desenvolvi habilidades em HTML e CSS para criar uma experiência de usuário agradável.
-- **Responsividade**: layout adaptável a diferentes tamanhos de tela, garantindo uma experiência otimizada em dispositivos móveis e desktops.
 
 ## 📐 Design e Protótipo
 
@@ -72,7 +67,7 @@ Para visualizar os resultados do exercício, siga estas etapas:
 - **Aprimorar o Banco de Dados**;
 - **Incluir Funcionalidades Interativas**;
 - **Melhorar a Interface**;
-- **Melhorar a filtragem de livros para buscar tambèm por genêro ou autor**;
+- **Melhorar a filtragem de livros para buscar também por genêro ou autor**;
 - **Entre outras funcionalidades**;
 
 
