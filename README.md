@@ -43,7 +43,7 @@ Para visualizar os resultados do exercício, siga estas etapas:
 
 1. **Clone o Repositório**: Execute o comando abaixo para clonar o repositório para sua máquina local:
    ```bash
-    git clone https://github.com/Ellenylce/Estudo_Full_stack_Estante_Web_php.git
+    git clone https://github.com/Ellenylce/Estudo_Full_Stack_Estante_Web.git
    
 2. **Certifique-se de que o servidor local (XAMPP) esteja rodando (se não tiver o servidor, instale-o em seu computador)**:
    Inicie o Apache clicando no botão "Start" ao lado dele. Isso fará com que o servidor web comece a rodar.
@@ -58,7 +58,7 @@ Para visualizar os resultados do exercício, siga estas etapas:
     C:\xampp\htdocs\minha_pasta
 
 5. **Acesse o arquivo PHP através do navegador, digitando**
-   `http://localhost/minha_pasta/Estudo_Full_stack_Estante_Web_php/index.php`.
+   `http://localhost/minha_pasta/Estudo_Full_Stack_Estante_Web/index.php`.
 
 ## 📚 Próximos passos:
 
